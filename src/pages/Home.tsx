@@ -175,7 +175,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-6 rounded-b-3xl">
+      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-4 rounded-b-3xl">
         <div className="text-center space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -209,7 +209,7 @@ const Home: React.FC = () => {
       <div className="p-4">
 
         {/* Popular Countries */}
-        <div className="mb-6">
+        <div className="mb-4">
           <h2 className="text-xl font-bold text-navy mb-4">Popular Countries</h2>
           
           {/* All Screen Sizes - Auto-sliding Carousel */}
@@ -217,7 +217,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Visa Services */}
-        <div className="mb-6">
+        <div className="mb-4">
           <h2 className="text-xl font-bold text-navy mb-4">Our Services</h2>
           <div className="space-y-3">
             {visaTypes.map((service, index) => (
@@ -249,7 +249,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="mb-6">
+        <div className="mb-4">
           <h2 className="text-xl font-bold text-navy mb-4">Why Choose Us</h2>
           <div className="grid grid-cols-2 gap-3">
             {whyChooseUs.map((feature, index) => (
@@ -269,7 +269,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="mb-6">
+        <div className="mb-4">
           <h2 className="text-xl font-bold text-navy mb-4">What Our Clients Say</h2>
           <div className="space-y-3">
             {testimonials.map((testimonial, index) => (

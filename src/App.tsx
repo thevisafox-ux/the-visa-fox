@@ -229,7 +229,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
           <div className="absolute bottom-2 left-1/2 w-12 h-12 bg-blue-400/10 rounded-full blur-lg animate-pulse" style={{animationDelay: '4s'}}></div>
         </div>
         
-        <div className="flex items-center justify-between px-4 py-4 relative z-10">
+        <div className="flex items-center justify-between px-4 py-3 relative z-10">
           <Link 
             to="/" 
             onClick={() => {
@@ -267,7 +267,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </div>
 
       {/* Mobile Main Content - Optimized Spacing */}
-      <main className="pt-8 pb-24 px-4 mobile-smooth-scroll">
+      <main className="pt-4 pb-20 px-4 mobile-smooth-scroll">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -279,8 +279,8 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </main>
 
       {/* Mobile Bottom Navigation - Curved Design */}
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm bg-white/95 backdrop-blur-md border border-gray-200/50 shadow-2xl mobile-nav-3d z-50 mobile-nav-refined rounded-3xl">
-        <div className="flex items-center justify-around py-3 px-4">
+      <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm bg-white/95 backdrop-blur-md border border-gray-200/50 shadow-2xl mobile-nav-3d z-50 mobile-nav-refined rounded-3xl">
+        <div className="flex items-center justify-around py-2 px-4">
           <MobileNavLink to="/" icon="🏡" label="Home" setIsLoading={setIsLoading} />
           <MobileNavLink to="/sop-generator" icon="✍️" label="SOP" setIsLoading={setIsLoading} />
           <MobileNavLink to="/checklist" icon="📋" label="Checklist" setIsLoading={setIsLoading} />
@@ -290,7 +290,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </div>
 
       {/* Mobile Footer - Optimized Spacing */}
-      <div className="pb-24">
+      <div className="pb-20">
         <Footer />
       </div>
 
