@@ -3646,7 +3646,7 @@ const Checklist: React.FC = () => {
          {/* Visa Type Selection Popup */}
          {showVisaTypePopup && (
            <motion.div
-             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 pb-20 md:pb-4"
+             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60 p-2 pb-20 md:pb-4"
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              exit={{ opacity: 0 }}
@@ -3698,7 +3698,7 @@ const Checklist: React.FC = () => {
          {/* Checklist Display Popup */}
          {showChecklistPopup && (
            <motion.div
-             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 pb-20 md:pb-4"
+             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60 p-2 pb-20 md:pb-4"
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              exit={{ opacity: 0 }}

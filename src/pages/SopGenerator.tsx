@@ -1378,7 +1378,7 @@ ${data.name}`;
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-2 md:p-4 pb-20 md:pb-4"
+            className="fixed inset-0 bg-black/60 backdrop-blur-md z-60 flex items-center justify-center p-2 md:p-4 pb-20 md:pb-4"
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0, y: 50 }}

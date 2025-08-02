@@ -213,8 +213,8 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
   
   return (
     <div className="w-full max-w-sm mx-auto bg-gradient-to-br from-gray-50 to-white shadow-2xl min-h-screen relative overflow-hidden mobile-smooth-scroll mobile-tap-highlight">
-      {/* Mobile App Header - Normal Position */}
-      <div className="w-full max-w-sm mx-auto bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-lg border-b border-white/20 mobile-header-refined relative overflow-hidden rounded-b-3xl">
+      {/* Mobile App Header - Fixed and Floating */}
+      <div className="fixed top-3 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-2xl border border-saffron/30 mobile-header-refined z-40 overflow-hidden rounded-3xl transition-all duration-300">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-2 left-2 w-16 h-16 bg-white rounded-full animate-pulse"></div>
@@ -267,7 +267,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </div>
 
       {/* Mobile Main Content - Optimized Spacing */}
-      <main className="pt-4 pb-20 px-2 mobile-smooth-scroll min-h-screen">
+      <main className="pt-20 pb-20 px-2 mobile-smooth-scroll min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />

@@ -13,7 +13,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ isVisible }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center"
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-70 flex items-center justify-center"
     >
       <div className="bg-white rounded-2xl p-8 shadow-2xl border border-gray-200">
         {/* Main Spinner */}
