@@ -250,12 +250,6 @@
 .mobile-nav-3d {
   perspective: 1000px;
   transform-style: preserve-3d;
-  animation: navFloat 3s ease-in-out infinite;
-}
-
-@keyframes navFloat {
-  0%, 100% { transform: translateY(0px) rotateX(0deg); }
-  50% { transform: translateY(-2px) rotateX(2deg); }
 }
 
 .mobile-nav-active {

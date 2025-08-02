@@ -279,7 +279,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </main>
 
       {/* Mobile Bottom Navigation - 3D Design */}
-      <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 w-10/12 max-w-xs bg-white/95 backdrop-blur-md border border-gray-200/50 shadow-2xl mobile-nav-3d z-50 mobile-nav-refined rounded-3xl transform-gpu hover:scale-105 transition-all duration-300">
+      <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 w-10/12 max-w-xs bg-white/95 backdrop-blur-md border border-gray-200/50 shadow-2xl mobile-nav-3d z-50 mobile-nav-refined rounded-3xl transition-all duration-300">
         <div className="flex items-center justify-around py-2 px-4 relative">
           {/* 3D Glow Effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 via-yellow-200/5 to-saffron/10 rounded-3xl blur-sm"></div>
