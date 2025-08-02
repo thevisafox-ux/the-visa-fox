@@ -170,20 +170,20 @@ const Home: React.FC = () => {
   return (
     <div className="pb-20">
       {/* Image Carousel */}
-      <div className="p-4 mb-6">
+      <div className="p-2 mb-4">
         <ImageCarousel slides={carouselSlides} autoPlayInterval={6000} />
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-4 rounded-b-3xl">
+      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-3 rounded-b-3xl">
         <div className="text-center space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl font-bold mb-2">Navigating Borders</h1>
-            <p className="text-lg opacity-90 mb-6">Delivering Dreams</p>
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">Navigating Borders</h1>
+            <p className="text-base md:text-lg opacity-90 mb-4 md:mb-6">Delivering Dreams</p>
             
             <div className="flex items-center justify-center space-x-4 text-sm opacity-80">
               <div className="flex items-center space-x-2">
@@ -206,7 +206,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-2">
 
         {/* Popular Countries */}
         <div className="mb-4">
