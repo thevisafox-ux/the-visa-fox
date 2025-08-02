@@ -218,12 +218,12 @@ const Home: React.FC = () => {
 
         {/* Visa Services */}
         <div className="mb-4">
-          <h2 className="text-xl font-bold text-navy mb-4">Our Services</h2>
-          <div className="space-y-3">
+          <h2 className="text-lg md:text-xl font-bold text-navy mb-3 md:mb-4">Our Services</h2>
+          <div className="space-y-2 md:space-y-3">
             {visaTypes.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="app-card flex items-center space-x-4 cursor-pointer hover:bg-gray-50 transition-colors duration-200"
+                className="app-card flex items-center space-x-3 md:space-x-4 cursor-pointer hover:bg-gray-50 transition-colors duration-200 p-3 md:p-4"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -235,14 +235,14 @@ const Home: React.FC = () => {
                   }
                 }}
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center text-white`}>
-                  <service.icon className="w-6 h-6" />
+                <div className={`w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center text-white`}>
+                  <service.icon className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-navy">{service.title}</h3>
-                  <p className="text-sm text-gray-600">{service.desc}</p>
+                  <h3 className="font-semibold text-navy text-sm md:text-base mb-1">{service.title}</h3>
+                  <p className="text-xs md:text-sm text-gray-600 leading-tight">{service.desc}</p>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-gray-400" />
               </motion.div>
             ))}
           </div>
@@ -250,19 +250,19 @@ const Home: React.FC = () => {
 
         {/* Why Choose Us */}
         <div className="mb-4">
-          <h2 className="text-xl font-bold text-navy mb-4">Why Choose Us</h2>
-          <div className="grid grid-cols-2 gap-3">
+          <h2 className="text-lg md:text-xl font-bold text-navy mb-3 md:mb-4">Why Choose Us</h2>
+          <div className="grid grid-cols-2 gap-2 md:gap-3">
             {whyChooseUs.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                className="app-card text-center p-4"
+                className="app-card text-center p-3 md:p-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <feature.icon className="w-8 h-8 mx-auto mb-2 text-saffron" />
-                <h3 className="font-semibold text-sm">{feature.title}</h3>
-                <p className="text-xs text-gray-600">{feature.desc}</p>
+                <feature.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-1 md:mb-2 text-saffron" />
+                <h3 className="font-semibold text-xs md:text-sm mb-1">{feature.title}</h3>
+                <p className="text-[10px] md:text-xs text-gray-600 leading-tight">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -270,29 +270,29 @@ const Home: React.FC = () => {
 
         {/* Testimonials */}
         <div className="mb-4">
-          <h2 className="text-xl font-bold text-navy mb-4">What Our Clients Say</h2>
-          <div className="space-y-3">
+          <h2 className="text-lg md:text-xl font-bold text-navy mb-3 md:mb-4">What Our Clients Say</h2>
+          <div className="space-y-2 md:space-y-3">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
-                className="app-card"
+                className="app-card p-3 md:p-4"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="flex items-start space-x-3">
-                  <div className="text-2xl">{testimonial.image}</div>
+                <div className="flex items-start space-x-2 md:space-x-3">
+                  <div className="text-xl md:text-2xl">{testimonial.image}</div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-semibold text-navy">{testimonial.name}</h3>
-                      <div className="flex items-center space-x-1">
+                    <div className="flex items-center justify-between mb-1 md:mb-2">
+                      <h3 className="font-semibold text-navy text-sm md:text-base">{testimonial.name}</h3>
+                      <div className="flex items-center space-x-0.5 md:space-x-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
                     </div>
-                    <p className="text-sm text-gray-600 mb-2">{testimonial.text}</p>
-                    <div className="flex items-center justify-between text-xs text-gray-500">
+                    <p className="text-xs md:text-sm text-gray-600 mb-1 md:mb-2 leading-tight">{testimonial.text}</p>
+                    <div className="flex items-center justify-between text-[10px] md:text-xs text-gray-500">
                       <span>{testimonial.city}</span>
                       <span>{testimonial.country}</span>
                     </div>
