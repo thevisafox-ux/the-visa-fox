@@ -241,10 +241,10 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
           >
             <Logo size="md" className="transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 logo-3d drop-shadow-lg" />
             <div className="group-hover:transform group-hover:translate-x-1 transition-transform duration-300">
-              <h1 className="text-lg font-bold bg-gradient-to-r from-white via-yellow-100 to-yellow-200 bg-clip-text text-transparent drop-shadow-sm mobile-text-optimization">
+              <h1 className="text-base md:text-lg font-bold bg-gradient-to-r from-white via-yellow-100 to-yellow-200 bg-clip-text text-transparent drop-shadow-sm mobile-text-optimization">
                 The Visa Fox
               </h1>
-              <p className="text-[10px] opacity-80 font-medium tracking-wide mobile-text-optimization leading-tight">
+              <p className="text-[8px] md:text-[10px] opacity-80 font-medium tracking-wide mobile-text-optimization leading-tight">
                 Navigating Borders<br />
                 Delivering Dreams
               </p>
@@ -253,7 +253,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
           <div className="flex items-center space-x-2">
             <button 
               onClick={() => setIsVisaModalOpen(true)}
-              className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all duration-300 transform hover:scale-105 shadow-lg border border-green-300/30"
+              className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs font-bold transition-all duration-300 transform hover:scale-105 shadow-lg border border-green-300/30"
             >
               🔍 Visa Check
             </button>
@@ -267,7 +267,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </div>
 
       {/* Mobile Main Content - Optimized Spacing */}
-      <main className="pt-4 pb-20 px-4 mobile-smooth-scroll">
+      <main className="pt-4 pb-20 px-4 mobile-smooth-scroll min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -352,7 +352,7 @@ const MobileNavLink: React.FC<{ to: string; icon: string; label: string; setIsLo
   return (
     <button
       onClick={handleClick}
-      className={`flex flex-col items-center justify-center py-2 px-2 rounded-2xl transition-all duration-300 group relative mobile-button-3d w-14 h-14 ${
+      className={`flex flex-col items-center justify-center py-1 px-1 md:py-2 md:px-2 rounded-2xl transition-all duration-300 group relative mobile-button-3d w-12 h-12 md:w-14 md:h-14 ${
         isActive 
           ? 'text-saffron bg-gradient-to-r from-saffron/15 to-yellow-200/15 shadow-lg mobile-nav-active border border-saffron/20 rounded-2xl' 
           : 'text-gray-600 hover:text-saffron hover:bg-gray-50/80 mobile-nav-inactive rounded-2xl'
