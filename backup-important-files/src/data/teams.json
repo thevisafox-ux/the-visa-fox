@@ -1,0 +1,85 @@
+{
+  "teams": [
+    {
+      "id": "tourist-visa-team",
+      "name": "Tourist Visa Team",
+      "type": "telecaller",
+      "members": [
+        {
+          "id": "staff-001",
+          "name": "Rahul Kumar",
+          "email": "rahul@thevisafox.com",
+          "phone": "+91 98765 43211",
+          "role": "telecaller",
+          "status": "available",
+          "currentLeads": 0
+        },
+        {
+          "id": "staff-002", 
+          "name": "Priya Sharma",
+          "email": "priya@thevisafox.com",
+          "phone": "+91 98765 43212",
+          "role": "telecaller",
+          "status": "available",
+          "currentLeads": 0
+        }
+      ],
+      "visaTypes": ["tourist", "business-visit"],
+      "maxLeads": 5
+    },
+    {
+      "id": "student-visa-team",
+      "name": "Student Visa Team", 
+      "type": "telecaller",
+      "members": [
+        {
+          "id": "staff-003",
+          "name": "Amit Patel",
+          "email": "amit@thevisafox.com",
+          "phone": "+91 98765 43213",
+          "role": "telecaller",
+          "status": "available",
+          "currentLeads": 0
+        },
+        {
+          "id": "staff-004",
+          "name": "Neha Singh",
+          "email": "neha@thevisafox.com", 
+          "phone": "+91 98765 43214",
+          "role": "telecaller",
+          "status": "available",
+          "currentLeads": 0
+        }
+      ],
+      "visaTypes": ["student", "study-abroad"],
+      "maxLeads": 5
+    },
+    {
+      "id": "work-visa-team",
+      "name": "Work Visa Guidance Team",
+      "type": "telecaller", 
+      "members": [
+        {
+          "id": "staff-005",
+          "name": "Vikram Singh",
+          "email": "vikram@thevisafox.com",
+          "phone": "+91 98765 43215",
+          "role": "telecaller",
+          "status": "available",
+          "currentLeads": 0
+        },
+        {
+          "id": "staff-006",
+          "name": "Anjali Verma",
+          "email": "anjali@thevisafox.com",
+          "phone": "+91 98765 43216", 
+          "role": "telecaller",
+          "status": "available",
+          "currentLeads": 0
+        }
+      ],
+      "visaTypes": ["work", "employment", "skilled-worker"],
+      "maxLeads": 5
+    }
+  ]
+} 

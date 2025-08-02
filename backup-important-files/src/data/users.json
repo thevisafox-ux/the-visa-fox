@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "demo@example.com",
+      "password": "password123",
+      "name": "Demo User",
+      "type": "customer",
+      "isAuthenticated": true,
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "onboardingData": {
+        "targetCountry": "United States",
+        "visaType": "Student Visa",
+        "purpose": "Study Abroad",
+        "employmentType": "Student",
+        "monthlyIncome": "Below 25,000",
+        "budget": "1,00,000 - 2,00,000",
+        "previousTravel": "Never traveled abroad",
+        "familyAbroad": "No family abroad",
+        "specialRequirements": "Need accommodation assistance"
+      },
+      "progressSteps": [
+        {
+          "id": "expert-connect",
+          "title": "Expert Connection",
+          "description": "Our visa specialists will review your profile and contact you",
+          "status": "completed",
+          "icon": "👨‍💼"
+        },
+        {
+          "id": "document-session",
+          "title": "Document Session",
+          "description": "Share checklist and upload required documents",
+          "status": "completed",
+          "icon": "📋"
+        },
+        {
+          "id": "interaction-session",
+          "title": "Interaction Session",
+          "description": "Online call or office visit for detailed discussion",
+          "status": "current",
+          "icon": "💬"
+        },
+        {
+          "id": "file-processing",
+          "title": "File Processing",
+          "description": "Processing your application and preparing documents",
+          "status": "locked",
+          "icon": "⚙️"
+        },
+        {
+          "id": "embassy-ready",
+          "title": "Ready for Embassy",
+          "description": "Application ready for embassy submission",
+          "status": "locked",
+          "icon": "🏛️"
+        },
+        {
+          "id": "embassy-submit",
+          "title": "Embassy Submission",
+          "description": "File submitted to embassy for review",
+          "status": "locked",
+          "icon": "📤"
+        },
+        {
+          "id": "under-review",
+          "title": "Under Review",
+          "description": "Embassy reviewing your application",
+          "status": "locked",
+          "icon": "🔍"
+        },
+        {
+          "id": "final-result",
+          "title": "Final Result",
+          "description": "Visa decision from embassy",
+          "status": "locked",
+          "icon": "✅"
+        }
+      ]
+    },
+    {
+      "id": "2", 
+      "email": "staff@visafox.com",
+      "password": "staff123",
+      "name": "Staff Member",
+      "type": "staff",
+      "isAuthenticated": true,
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "email": "partner@visafox.com", 
+      "password": "partner123",
+      "name": "Partner Agent",
+      "type": "partner",
+      "isAuthenticated": true,
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "email": "admin@visafox.com",
+      "password": "admin123", 
+      "name": "System Admin",
+      "type": "admin",
+      "isAuthenticated": true,
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+} 
