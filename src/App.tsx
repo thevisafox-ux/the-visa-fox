@@ -279,8 +279,8 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </main>
 
       {/* Mobile Bottom Navigation - 3D Design */}
-      <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 w-10/12 max-w-xs bg-white/95 backdrop-blur-md border border-gray-200/50 shadow-2xl mobile-nav-3d z-50 mobile-nav-refined rounded-3xl transition-all duration-300">
-        <div className="flex items-center justify-around py-2 px-3 relative">
+      <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm bg-white/95 backdrop-blur-md border border-gray-200/50 shadow-2xl mobile-nav-3d z-50 mobile-nav-refined rounded-3xl transition-all duration-300">
+        <div className="flex items-center justify-around py-3 px-4 relative">
           {/* 3D Glow Effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 via-yellow-200/5 to-saffron/10 rounded-3xl blur-sm"></div>
           {/* 3D Border Effect */}
@@ -294,7 +294,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </div>
 
       {/* Mobile Footer - Optimized Spacing */}
-      <div className="pb-24">
+      <div className="pb-28">
         <Footer />
       </div>
 
@@ -356,7 +356,7 @@ const MobileNavLink: React.FC<{ to: string; icon: string; label: string; setIsLo
   return (
     <button
       onClick={handleClick}
-      className={`flex flex-col items-center justify-center py-1 px-1 md:py-2 md:px-2 rounded-2xl transition-all duration-300 group relative mobile-button-3d w-12 h-12 md:w-14 md:h-14 transform-gpu hover:scale-110 active:scale-95 ${
+      className={`flex flex-col items-center justify-center py-1 px-1 md:py-2 md:px-2 rounded-2xl transition-all duration-300 group relative mobile-button-3d w-14 h-14 md:w-16 md:h-16 transform-gpu hover:scale-110 active:scale-95 ${
         isActive 
           ? 'text-saffron bg-gradient-to-r from-saffron/20 to-yellow-200/20 shadow-xl mobile-nav-active border-2 border-saffron/30 rounded-2xl relative overflow-hidden' 
           : 'text-gray-600 hover:text-saffron hover:bg-gradient-to-r hover:from-gray-50/90 hover:to-saffron/10 mobile-nav-inactive rounded-2xl relative overflow-hidden'
@@ -366,12 +366,12 @@ const MobileNavLink: React.FC<{ to: string; icon: string; label: string; setIsLo
       {isActive && (
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse rounded-2xl"></div>
       )}
-      <span className={`text-lg md:text-xl mb-1 transform transition-all duration-300 drop-shadow-sm relative z-10 ${
+      <span className={`text-xl md:text-2xl mb-1.5 transform transition-all duration-300 drop-shadow-sm relative z-10 ${
         isActive 
           ? 'group-hover:scale-110 group-hover:rotate-3' 
           : 'group-hover:scale-105 group-hover:rotate-2'
       }`}>{icon}</span>
-      <span className={`text-[9px] md:text-[10px] font-semibold transition-transform duration-300 tracking-wide leading-tight ${
+      <span className={`text-[10px] md:text-[11px] font-semibold transition-transform duration-300 tracking-wide leading-tight ${
         isActive 
           ? 'group-hover:translate-y-0.5 text-saffron' 
           : 'group-hover:translate-y-0.5 text-gray-500'
