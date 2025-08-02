@@ -128,10 +128,10 @@ const Blogs: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 md:mb-6">
                 Visa & Immigration Blog
               </h1>
-              <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+              <p className="text-sm md:text-base lg:text-xl text-gray-200 max-w-3xl mx-auto px-2 md:px-0">
                 Expert insights, guides, and tips for your visa journey. 
                 Stay updated with the latest immigration news and requirements.
               </p>
@@ -147,19 +147,19 @@ const Blogs: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-6 md:mb-12"
           >
-            <div className="card p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card p-3 md:p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
                 {/* Search */}
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 md:w-5 md:h-5" />
                   <input
                     type="text"
                     placeholder="Search articles..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent"
+                    className="w-full pl-8 md:pl-10 pr-3 md:pr-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent text-sm md:text-base"
                   />
                 </div>
 
@@ -168,7 +168,7 @@ const Blogs: React.FC = () => {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent"
+                    className="w-full px-3 md:px-4 py-2 md:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent text-sm md:text-base"
                   >
                     {categories.map((category) => (
                       <option key={category} value={category}>{category}</option>
@@ -180,7 +180,7 @@ const Blogs: React.FC = () => {
           </motion.div>
 
           {/* Blog Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {filteredBlogs.map((blog, index) => (
               <motion.div
                 key={blog.id}
@@ -190,54 +190,54 @@ const Blogs: React.FC = () => {
                 className="card overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Blog Image */}
-                <div className="h-48 bg-gradient-to-br from-saffron to-fox-orange flex items-center justify-center text-6xl">
+                <div className="h-32 md:h-48 bg-gradient-to-br from-saffron to-fox-orange flex items-center justify-center text-4xl md:text-6xl">
                   {blog.image}
                 </div>
 
                 {/* Blog Content */}
-                <div className="p-6">
+                <div className="p-3 md:p-6">
                   {/* Category Badge */}
-                  <div className="mb-3">
-                    <span className="inline-block bg-navy text-white text-xs px-3 py-1 rounded-full">
+                  <div className="mb-2 md:mb-3">
+                    <span className="inline-block bg-navy text-white text-[10px] md:text-xs px-2 md:px-3 py-0.5 md:py-1 rounded-full">
                       {blog.category}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-navy mb-3 line-clamp-2">
+                  <h3 className="text-base md:text-lg lg:text-xl font-bold text-navy mb-2 md:mb-3 line-clamp-2">
                     <Link to={`/blogs/${blog.id}`} className="hover:text-saffron transition-colors">
                       {blog.title}
                     </Link>
                   </h3>
 
                   {/* Excerpt */}
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 mb-3 md:mb-4 line-clamp-3 text-xs md:text-sm">
                     {blog.excerpt}
                   </p>
 
                   {/* Meta Information */}
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-xs md:text-sm text-gray-500 mb-3 md:mb-4">
                     <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-1">
-                        <User className="w-4 h-4" />
-                        <span>{blog.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{formatDate(blog.date)}</span>
-                      </div>
+                                              <div className="flex items-center space-x-1">
+                          <User className="w-3 h-3 md:w-4 md:h-4" />
+                          <span className="text-[10px] md:text-xs">{blog.author}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Calendar className="w-3 h-3 md:w-4 md:h-4" />
+                          <span className="text-[10px] md:text-xs">{formatDate(blog.date)}</span>
+                        </div>
                     </div>
-                    <span className="text-saffron font-medium">{blog.readTime}</span>
+                                          <span className="text-saffron font-medium text-[10px] md:text-xs">{blog.readTime}</span>
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                     {blog.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center space-x-1 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded"
+                        className="inline-flex items-center space-x-1 bg-gray-100 text-gray-600 text-[10px] md:text-xs px-1.5 md:px-2 py-0.5 md:py-1 rounded"
                       >
-                        <Tag className="w-3 h-3" />
+                        <Tag className="w-2 h-2 md:w-3 md:h-3" />
                         <span>{tag}</span>
                       </span>
                     ))}
@@ -246,10 +246,10 @@ const Blogs: React.FC = () => {
                   {/* Read More */}
                   <Link
                     to={`/blogs/${blog.id}`}
-                    className="inline-flex items-center space-x-2 text-saffron font-semibold hover:text-fox-orange transition-colors"
+                    className="inline-flex items-center space-x-2 text-saffron font-semibold hover:text-fox-orange transition-colors text-xs md:text-sm"
                   >
                     <span>Read More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
                   </Link>
                 </div>
               </motion.div>
@@ -276,23 +276,23 @@ const Blogs: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mt-16"
+            className="mt-8 md:mt-16"
           >
-            <div className="card p-8 bg-gradient-to-r from-saffron to-fox-orange text-white">
+            <div className="card p-4 md:p-8 bg-gradient-to-r from-saffron to-fox-orange text-white">
               <div className="text-center">
-                <h3 className="text-2xl font-bold mb-4">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-4">
                   Stay Updated with Visa News
                 </h3>
-                <p className="text-lg mb-6 opacity-90">
+                <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 opacity-90">
                   Get the latest visa updates, tips, and guides delivered to your inbox
                 </p>
-                <div className="max-w-md mx-auto flex space-x-4">
+                <div className="max-w-md mx-auto flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
+                    className="flex-1 px-3 md:px-4 py-2 md:py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base"
                   />
-                  <button className="bg-navy hover:bg-indian-blue text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                  <button className="bg-navy hover:bg-indian-blue text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold transition-colors text-sm md:text-base">
                     Subscribe
                   </button>
                 </div>
