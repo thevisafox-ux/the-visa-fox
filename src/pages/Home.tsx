@@ -170,7 +170,7 @@ const Home: React.FC = () => {
   return (
     <div className="pb-20">
       {/* Image Carousel */}
-      <div className="p-2 mb-4">
+      <div className="px-0 mb-4">
         <ImageCarousel slides={carouselSlides} autoPlayInterval={6000} />
       </div>
 
@@ -206,7 +206,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="p-2">
+      <div className="px-2">
 
         {/* Popular Countries */}
         <div className="mb-4">
