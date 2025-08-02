@@ -114,14 +114,14 @@ const VisaEligibilityModal: React.FC<VisaEligibilityModalProps> = ({ isOpen, onC
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center p-2 md:p-4 pt-4 md:pt-0 pb-24 md:pb-4"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center p-1 md:p-4 pt-2 md:pt-0 pb-20 md:pb-4"
           onClick={onClose}
         >
                      <motion.div
              initial={{ opacity: 0, scale: 0.9, y: 20 }}
              animate={{ opacity: 1, scale: 1, y: 0 }}
              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-             className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[95vh] md:max-h-[95vh] overflow-y-auto relative mx-2 md:mx-0"
+             className="bg-white rounded-xl md:rounded-2xl shadow-2xl w-full max-w-lg md:max-w-2xl max-h-[90vh] md:max-h-[95vh] overflow-y-auto relative mx-1 md:mx-0"
              onClick={(e) => e.stopPropagation()}
            >
              {/* Success Notification */}
@@ -160,35 +160,35 @@ const VisaEligibilityModal: React.FC<VisaEligibilityModalProps> = ({ isOpen, onC
               </div>
             )}
             {/* Header */}
-                         <div className="bg-gradient-to-r from-navy to-saffron text-white p-2 md:p-6 rounded-t-2xl">
+                         <div className="bg-gradient-to-r from-navy to-saffron text-white p-2 md:p-4 lg:p-6 rounded-t-xl md:rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 md:space-x-3">
-                  <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <Globe className="w-4 h-4 md:w-5 md:h-5" />
+                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <Globe className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                   </div>
                   <div>
-                    <h2 className="text-lg md:text-xl font-bold">Visa Eligibility Assessment</h2>
-                    <p className="text-xs md:text-sm opacity-90">Get your personalized visa guidance & requirements</p>
+                    <h2 className="text-sm md:text-base lg:text-lg xl:text-xl font-bold">Visa Eligibility Assessment</h2>
+                    <p className="text-[10px] md:text-xs lg:text-sm opacity-90">Get your personalized visa guidance & requirements</p>
                   </div>
                 </div>
                 <button
                   onClick={onClose}
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  <X className="w-5 h-5 md:w-6 md:h-6" />
+                  <X className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                 </button>
               </div>
             </div>
 
             {/* Progress Bar */}
-                         <div className="px-3 md:px-6 py-2 md:py-4 bg-gray-50">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs md:text-sm font-semibold text-gray-700">Step {currentStep} of 3</span>
-                <span className="text-xs md:text-sm font-medium text-gray-600">{Math.round((currentStep / 3) * 100)}%</span>
+                         <div className="px-2 md:px-4 lg:px-6 py-2 md:py-3 lg:py-4 bg-gray-50">
+              <div className="flex items-center justify-between mb-1 md:mb-2">
+                <span className="text-[10px] md:text-xs lg:text-sm font-semibold text-gray-700">Step {currentStep} of 3</span>
+                <span className="text-[10px] md:text-xs lg:text-sm font-medium text-gray-600">{Math.round((currentStep / 3) * 100)}%</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-gray-200 rounded-full h-1.5 md:h-2">
                 <motion.div
-                  className="bg-gradient-to-r from-navy to-saffron h-2 rounded-full"
+                  className="bg-gradient-to-r from-navy to-saffron h-1.5 md:h-2 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${(currentStep / 3) * 100}%` }}
                   transition={{ duration: 0.3 }}
@@ -197,25 +197,25 @@ const VisaEligibilityModal: React.FC<VisaEligibilityModalProps> = ({ isOpen, onC
             </div>
 
             {/* Content */}
-                         <div className="p-2 md:p-6">
+                         <div className="p-2 md:p-4 lg:p-6">
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-8"
+                  className="text-center py-6 md:py-8"
                 >
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                    <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">
                     Assessment Request Submitted!
                   </h3>
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6">
                     Thank you for your submission. Our visa experts will analyze your profile and contact you within 24 hours with personalized guidance and requirements.
                   </p>
-                                     <div className="space-y-3 text-sm text-gray-700">
+                                     <div className="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-700">
                      <p className="font-semibold text-gray-800">What happens next?</p>
-                     <ul className="text-left space-y-1">
+                     <ul className="text-left space-y-0.5 md:space-y-1">
                        <li>• Profile analysis by visa experts</li>
                        <li>• Personalized visa strategy</li>
                        <li>• Document requirements list</li>
@@ -224,24 +224,24 @@ const VisaEligibilityModal: React.FC<VisaEligibilityModalProps> = ({ isOpen, onC
                    </div>
                 </motion.div>
               ) : (
-                                 <form onSubmit={handleSubmit} className="space-y-4">
+                                 <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
                   {/* Step 1: Basic Information */}
                   {currentStep === 1 && (
                                          <motion.div
                        initial={{ opacity: 0, x: 20 }}
                        animate={{ opacity: 1, x: 0 }}
                        exit={{ opacity: 0, x: -20 }}
-                       className="space-y-3"
+                       className="space-y-2 md:space-y-3"
                      >
-                       <h3 className="text-lg font-semibold text-gray-800">Basic Information</h3>
+                       <h3 className="text-base md:text-lg font-semibold text-gray-800">Basic Information</h3>
                       
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 lg:gap-4">
                                                  <input
                            type="text"
                            required
                            value={formData.name}
                            onChange={(e) => setFormData({...formData, name: e.target.value})}
-                           className="w-full px-3 py-2.5 md:px-4 md:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-sm md:text-base text-gray-900 placeholder-gray-500"
+                           className="w-full px-2 md:px-3 lg:px-4 py-2 md:py-2.5 lg:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-xs md:text-sm lg:text-base text-gray-900 placeholder-gray-500"
                            placeholder="Full Name"
                          />
                                                  <input
@@ -249,31 +249,31 @@ const VisaEligibilityModal: React.FC<VisaEligibilityModalProps> = ({ isOpen, onC
                            required
                            value={formData.email}
                            onChange={(e) => setFormData({...formData, email: e.target.value})}
-                           className="w-full px-3 py-2.5 md:px-4 md:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-sm md:text-base text-gray-900 placeholder-gray-500"
+                           className="w-full px-2 md:px-3 lg:px-4 py-2 md:py-2.5 lg:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-xs md:text-sm lg:text-base text-gray-900 placeholder-gray-500"
                            placeholder="Email Address"
                          />
                                                  <input
                            type="tel"
                            value={formData.phone}
                            onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                           className="w-full px-3 py-2.5 md:px-4 md:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-sm md:text-base text-gray-900 placeholder-gray-500"
+                           className="w-full px-2 md:px-3 lg:px-4 py-2 md:py-2.5 lg:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-xs md:text-sm lg:text-base text-gray-900 placeholder-gray-500"
                            placeholder="Phone Number"
                          />
                          <input
                            type="number"
                            value={formData.age}
                            onChange={(e) => setFormData({...formData, age: e.target.value})}
-                           className="w-full px-3 py-2.5 md:px-4 md:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-sm md:text-base text-gray-900 placeholder-gray-500"
+                           className="w-full px-2 md:px-3 lg:px-4 py-2 md:py-2.5 lg:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-xs md:text-sm lg:text-base text-gray-900 placeholder-gray-500"
                            placeholder="Age"
                          />
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 lg:gap-4">
                                                  <select
                            required
                            value={formData.currentCountry}
                            onChange={(e) => setFormData({...formData, currentCountry: e.target.value})}
-                           className="w-full px-3 py-2.5 md:px-4 md:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-sm md:text-base text-gray-900"
+                           className="w-full px-2 md:px-3 lg:px-4 py-2 md:py-2.5 lg:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-xs md:text-sm lg:text-base text-gray-900"
                          >
                           <option value="" className="text-gray-500">Current Country</option>
                           {countries.map(country => (
@@ -284,7 +284,7 @@ const VisaEligibilityModal: React.FC<VisaEligibilityModalProps> = ({ isOpen, onC
                            required
                            value={formData.targetCountry}
                            onChange={(e) => setFormData({...formData, targetCountry: e.target.value})}
-                           className="w-full px-3 py-2.5 md:px-4 md:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-sm md:text-base text-gray-900"
+                           className="w-full px-2 md:px-3 lg:px-4 py-2 md:py-2.5 lg:py-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-navy/20 focus:border-navy transition-all duration-200 text-xs md:text-sm lg:text-base text-gray-900"
                          >
                           <option value="" className="text-gray-500">Target Country</option>
                           {countries.filter(c => c !== formData.currentCountry).map(country => (
