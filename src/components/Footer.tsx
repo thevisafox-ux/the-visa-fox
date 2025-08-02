@@ -164,7 +164,7 @@ const Footer: React.FC = () => {
                     href="/contact" 
                     className="inline-block bg-gradient-to-r from-saffron to-fox-orange hover:from-fox-orange hover:to-saffron text-white px-4 md:px-6 py-2 md:py-3 rounded-lg transition-all duration-300 font-semibold transform hover:scale-105 shadow-lg text-xs md:text-sm w-full text-center"
                   >
-                    Contact Now
+                  Contact Now
                   </a>
                   <p className="text-[10px] md:text-xs text-gray-400 text-center">
                     No hidden charges • Expert guidance • 24/7 support
