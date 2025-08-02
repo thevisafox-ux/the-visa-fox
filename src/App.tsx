@@ -58,16 +58,21 @@ const DesktopLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Desktop Header */}
-      <header className="bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-xl border-b border-white/10 relative overflow-hidden">
+      {/* Desktop Header - Fixed and Floating */}
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-6xl bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-2xl border border-saffron/30 z-40 rounded-3xl transition-all duration-300">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16 animate-pulse"></div>
-          <div className="absolute top-20 right-10 w-24 h-24 bg-white rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-10 left-20 w-16 h-16 bg-white rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16 animate-pulse shadow-2xl"></div>
+          <div className="absolute top-20 right-10 w-24 h-24 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-10 left-20 w-16 h-16 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '2s'}}></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 py-6 relative z-10">
+        {/* 3D Glow Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-saffron/5 via-transparent to-indian-blue/5 rounded-3xl blur-sm"></div>
+        {/* 3D Border Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 via-white/5 to-indian-blue/10 rounded-3xl opacity-30"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 py-3 relative z-10">
           <div className="flex items-center justify-between">
             <Link 
               to="/" 
@@ -83,10 +88,6 @@ const DesktopLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({
                 <h1 className="text-3xl font-bold bg-gradient-to-r from-white via-yellow-100 to-yellow-200 bg-clip-text text-transparent drop-shadow-sm">
                   The Visa Fox
                 </h1>
-                <p className="text-sm opacity-80 font-medium tracking-wide leading-tight">
-                  Navigating Borders<br />
-                  Delivering Dreams
-                </p>
               </div>
             </Link>
             
@@ -104,7 +105,7 @@ const DesktopLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({
       </header>
 
       {/* Desktop Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-8">
+      <main className="max-w-7xl mx-auto px-6 pt-16 pb-8">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -135,16 +136,21 @@ const TabletLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Tablet Header */}
-      <header className="bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-xl border-b border-white/10 relative overflow-hidden">
+      {/* Tablet Header - Fixed and Floating */}
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-4xl bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-2xl border border-saffron/30 z-40 rounded-3xl transition-all duration-300">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-24 h-24 bg-white rounded-full -translate-x-12 -translate-y-12 animate-pulse"></div>
-          <div className="absolute top-16 right-8 w-20 h-20 bg-white rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-8 left-16 w-12 h-12 bg-white rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-0 left-0 w-24 h-24 bg-white rounded-full -translate-x-12 -translate-y-12 animate-pulse shadow-2xl"></div>
+          <div className="absolute top-16 right-8 w-20 h-20 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-8 left-16 w-12 h-12 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '2s'}}></div>
         </div>
         
-        <div className="max-w-4xl mx-auto px-6 py-5 relative z-10">
+        {/* 3D Glow Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-saffron/5 via-transparent to-indian-blue/5 rounded-3xl blur-sm"></div>
+        {/* 3D Border Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 via-white/5 to-indian-blue/10 rounded-3xl opacity-30"></div>
+        
+        <div className="max-w-4xl mx-auto px-6 py-3 relative z-10">
           <div className="flex items-center justify-between">
             <Link 
               to="/" 
@@ -160,10 +166,6 @@ const TabletLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
               <h1 className="text-2xl font-bold bg-gradient-to-r from-white via-yellow-100 to-yellow-200 bg-clip-text text-transparent drop-shadow-sm">
                 The Visa Fox
               </h1>
-              <p className="text-xs opacity-80 font-medium tracking-wide leading-tight">
-                Navigating Borders<br />
-                Delivering Dreams
-              </p>
             </div>
             </Link>
             
@@ -181,7 +183,7 @@ const TabletLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
       </header>
 
       {/* Tablet Main Content */}
-      <main className="max-w-4xl mx-auto px-6 py-6">
+      <main className="max-w-4xl mx-auto px-6 pt-16 pb-6">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -214,12 +216,12 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
   return (
     <div className="w-full max-w-sm mx-auto bg-gradient-to-br from-gray-50 to-white shadow-2xl min-h-screen relative overflow-hidden mobile-smooth-scroll mobile-tap-highlight">
       {/* Mobile App Header - Fixed and Floating */}
-      <div className="fixed top-3 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-2xl border border-saffron/30 mobile-header-refined z-40 overflow-hidden rounded-3xl transition-all duration-300">
+      <div className="fixed top-3 left-1/2 transform -translate-x-1/2 w-11/12 max-w-sm bg-gradient-to-r from-navy via-navy/95 to-saffron text-white shadow-2xl border border-saffron/30 mobile-header-refined z-40 rounded-3xl transition-all duration-300">
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-2 left-2 w-16 h-16 bg-white rounded-full animate-pulse"></div>
-          <div className="absolute top-8 right-4 w-12 h-12 bg-white rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-2 left-8 w-8 h-8 bg-white rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-2 left-2 w-16 h-16 bg-white rounded-full animate-pulse shadow-2xl"></div>
+          <div className="absolute top-8 right-4 w-12 h-12 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-2 left-8 w-8 h-8 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '2s'}}></div>
         </div>
         
         {/* Subtle Animated Glow/Particles */}
@@ -228,6 +230,11 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
           <div className="absolute top-8 right-8 w-10 h-10 bg-yellow-300/10 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
           <div className="absolute bottom-2 left-1/2 w-12 h-12 bg-blue-400/10 rounded-full blur-lg animate-pulse" style={{animationDelay: '4s'}}></div>
             </div>
+        
+        {/* 3D Glow Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-saffron/5 via-transparent to-indian-blue/5 rounded-3xl blur-sm"></div>
+        {/* 3D Border Effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 via-white/5 to-indian-blue/10 rounded-3xl opacity-30"></div>
         
         <div className="flex items-center justify-between px-4 py-3 relative z-10">
           <Link 
@@ -244,10 +251,6 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
               <h1 className="text-base md:text-lg font-bold bg-gradient-to-r from-white via-yellow-100 to-yellow-200 bg-clip-text text-transparent drop-shadow-sm mobile-text-optimization">
                 The Visa Fox
               </h1>
-              <p className="text-[8px] md:text-[10px] opacity-80 font-medium tracking-wide mobile-text-optimization leading-tight">
-                Navigating Borders<br />
-                Delivering Dreams
-              </p>
             </div>
           </Link>
           <div className="flex items-center space-x-2">
