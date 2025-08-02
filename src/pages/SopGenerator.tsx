@@ -1378,36 +1378,39 @@ ${data.name}`;
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md z-60 flex items-center justify-center p-2 md:p-4 pb-20 md:pb-4"
+            className="fixed inset-0 bg-black/90 backdrop-blur-md z-[9999] flex items-center justify-center p-1 md:p-4 pb-16 md:pb-4"
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 50 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[80vh] overflow-hidden relative mx-2 md:mx-0 flex flex-col"
+              className="bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] md:max-h-[85vh] overflow-hidden relative mx-1 md:mx-0 flex flex-col border-4 border-white"
             >
               {/* Close Button */}
               <button
-                onClick={() => setShowSOPModal(false)}
-                className="absolute top-4 right-4 z-20 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200"
+                onClick={() => {
+                  setShowSOPModal(false);
+                  setGeneratedSOP(''); // Clear generated SOP when modal closes
+                }}
+                className="absolute top-2 right-2 md:top-4 md:right-4 z-20 w-8 h-8 md:w-10 md:h-10 bg-red-500 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-lg"
               >
-                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
 
               {/* Header */}
-              <div className="p-3 md:p-4 border-b border-gray-200 bg-gradient-to-r from-navy via-indian-blue to-saffron">
+              <div className="p-2 md:p-4 border-b border-gray-200 bg-gradient-to-r from-navy via-indian-blue to-saffron">
                 <div className="flex items-center space-x-2 md:space-x-3">
-                  <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center">
-                    <FileText className="w-5 h-5 md:w-6 md:h-6 text-saffron" />
+                  <div className="w-6 h-6 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center">
+                    <FileText className="w-4 h-4 md:w-6 md:h-6 text-saffron" />
                   </div>
                   <div>
-                    <h2 className="text-lg md:text-2xl font-bold text-white">
+                    <h2 className="text-base md:text-2xl font-bold text-white">
                       Your Generated SOP
                     </h2>
-                    <p className="text-white/90 text-xs md:text-sm">
+                    <p className="text-white/90 text-[10px] md:text-sm">
                       {formData.name} - {formData.country}
                     </p>
                   </div>
@@ -1415,24 +1418,24 @@ ${data.name}`;
               </div>
 
               {/* Action Buttons - Moved to Top */}
-              <div className="p-2 md:p-3 border-b border-gray-200 bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0">
+              <div className="p-2 md:p-3 border-b border-gray-200 bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0">
                 <div className="flex items-center space-x-2 md:space-x-3">
                   <motion.button
                     onClick={copyToClipboard}
-                    className="flex items-center justify-center space-x-2 bg-navy text-white px-3 py-2 md:px-4 md:py-2 rounded-lg hover:bg-indian-blue transition-all duration-300 text-sm md:text-base"
+                    className="flex items-center justify-center space-x-1 md:space-x-2 bg-navy text-white px-2 py-1.5 md:px-4 md:py-2 rounded-lg hover:bg-indian-blue transition-all duration-300 text-xs md:text-base"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {copied ? <CheckCircle className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                    {copied ? <CheckCircle className="w-3 h-3 md:w-4 md:h-4" /> : <Copy className="w-3 h-3 md:w-4 md:h-4" />}
                     <span className="font-medium">{copied ? 'Copied!' : 'Copy'}</span>
                   </motion.button>
 
                   <div className="relative" ref={downloadDropdownRef}>
                     <button
                       onClick={() => setShowDownloadOptions(!showDownloadOptions)}
-                      className="flex items-center justify-between space-x-1 bg-white border-2 border-gray-300 rounded-lg px-2 py-2 hover:border-saffron focus:border-saffron focus:outline-none transition-colors duration-200 min-w-[80px] md:min-w-[100px] text-xs md:text-sm"
+                      className="flex items-center justify-between space-x-1 bg-white border-2 border-gray-300 rounded-lg px-2 py-1.5 md:px-3 md:py-2 hover:border-saffron focus:border-saffron focus:outline-none transition-colors duration-200 min-w-[70px] md:min-w-[100px] text-[10px] md:text-sm shadow-sm"
                     >
-                      <span className="text-gray-700 truncate">
+                      <span className="text-gray-700 truncate font-medium">
                         {downloadFormat === 'txt' ? 'TXT' :
                          downloadFormat === 'pdf' ? 'PDF' :
                          downloadFormat === 'docx' ? 'DOCX' : 'Format'}
@@ -1441,13 +1444,13 @@ ${data.name}`;
                     </button>
                     
                     {showDownloadOptions && (
-                      <div className="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 min-w-[200px]">
-                        <div className="px-4 py-3 text-sm font-medium text-gray-700 border-b border-gray-100 bg-gray-50 rounded-t-lg">
+                      <div className="absolute top-full mt-1 md:mt-2 right-0 bg-white rounded-lg shadow-2xl border border-gray-200 py-1 md:py-2 z-50 min-w-[180px] md:min-w-[220px]">
+                        <div className="px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm font-medium text-gray-700 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white rounded-t-lg">
                           <div className="flex items-center space-x-2">
-                            <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 md:w-4 md:h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
-                            <span>Choose Format:</span>
+                            <span className="font-semibold">Choose Format:</span>
                           </div>
                         </div>
                         {[
@@ -1461,16 +1464,16 @@ ${data.name}`;
                               setDownloadFormat(format.value);
                               setShowDownloadOptions(false);
                             }}
-                            className={`w-full px-4 py-3 text-left transition-colors flex items-center space-x-3 border-b border-gray-100 last:border-b-0 ${
+                            className={`w-full px-3 md:px-4 py-2 md:py-3 text-left transition-all duration-200 flex items-center space-x-2 md:space-x-3 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 ${
                               downloadFormat === format.value 
-                                ? 'bg-navy/10 text-navy font-medium' 
-                                : 'hover:bg-gray-50 text-gray-700'
+                                ? 'bg-navy/10 text-navy font-semibold border-l-4 border-l-navy' 
+                                : 'text-gray-700'
                             }`}
                           >
-                            <span className="text-lg">{format.icon}</span>
-                            <span className="text-sm font-medium">{format.label}</span>
+                            <span className="text-base md:text-lg">{format.icon}</span>
+                            <span className="text-xs md:text-sm font-medium flex-1">{format.label}</span>
                             {downloadFormat === format.value && (
-                              <CheckCircle className="w-4 h-4 text-navy ml-auto" />
+                              <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-navy ml-auto flex-shrink-0" />
                             )}
                           </button>
                         ))}
@@ -1480,7 +1483,7 @@ ${data.name}`;
                   
                   <motion.button
                     onClick={downloadSOP}
-                    className="flex items-center justify-center space-x-1 bg-green-600 text-white px-2 py-2 md:px-3 md:py-2 rounded-lg hover:bg-green-700 transition-all duration-300 text-xs md:text-sm"
+                    className="flex items-center justify-center space-x-1 bg-green-600 text-white px-2 py-1.5 md:px-3 md:py-2 rounded-lg hover:bg-green-700 transition-all duration-300 text-xs md:text-sm"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -1491,19 +1494,19 @@ ${data.name}`;
               </div>
 
               {/* SOP Content - Moved Below */}
-              <div className="flex-1 overflow-y-auto p-3 md:p-4">
-                <div className="bg-gray-50 rounded-lg p-3 md:p-4 border border-gray-200">
-                  <div className="mb-3 md:mb-4">
-                    <h3 className="text-base md:text-lg font-semibold text-gray-800 mb-2">Statement of Purpose</h3>
-                    <div className="text-xs md:text-sm text-gray-600 space-y-1">
+              <div className="flex-1 overflow-y-auto p-2 md:p-4 bg-white">
+                <div className="bg-white rounded-lg p-2 md:p-4 border-2 border-gray-100 shadow-sm">
+                  <div className="mb-2 md:mb-4 bg-gradient-to-r from-gray-50 to-white p-2 md:p-3 rounded-lg border border-gray-200">
+                    <h3 className="text-sm md:text-lg font-semibold text-gray-800 mb-2">Statement of Purpose</h3>
+                    <div className="text-[10px] md:text-sm text-gray-600 space-y-1 bg-white p-2 rounded border border-gray-100">
                       <p><strong>Name:</strong> {formData.name}</p>
                       <p><strong>Country:</strong> {formData.country}</p>
                       <p><strong>University:</strong> {formData.university}</p>
                       <p><strong>Course:</strong> {formData.course}</p>
                     </div>
                   </div>
-                  <div className="border-t border-gray-200 pt-3 md:pt-4">
-                    <pre className="whitespace-pre-wrap text-xs md:text-sm text-gray-800 font-mono leading-relaxed">
+                  <div className="border-t-2 border-gray-200 pt-2 md:pt-4 bg-white rounded-lg">
+                    <pre className="whitespace-pre-wrap text-[10px] md:text-sm text-gray-800 font-mono leading-relaxed bg-white p-2 md:p-3 rounded border border-gray-100">
                       {generatedSOP}
                     </pre>
                   </div>
