@@ -73,8 +73,11 @@ const CountriesCarousel: React.FC<CountriesCarouselProps> = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="text-3xl mb-2 transform transition-transform duration-300 hover:scale-110">
-                  {country.emoji}
+                <div className="flex flex-col items-center mb-2">
+                  {/* Emoji Flag */}
+                  <div className="text-3xl md:text-4xl transform transition-transform duration-300 hover:scale-110 mb-1">
+                    {country.emoji}
+                  </div>
                 </div>
                 <h3 className="font-semibold text-sm text-navy">{country.name}</h3>
                 <p className="text-xs text-gray-600 mt-1">{country.visa}</p>
@@ -106,8 +109,11 @@ const CountriesCarousel: React.FC<CountriesCarouselProps> = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="text-3xl mb-2 transform transition-transform duration-300 hover:scale-110">
-                  {country.emoji}
+                <div className="flex flex-col items-center mb-2">
+                  {/* Emoji Flag */}
+                  <div className="text-3xl md:text-4xl transform transition-transform duration-300 hover:scale-110 mb-1">
+                    {country.emoji}
+                  </div>
                 </div>
                 <h3 className="font-semibold text-sm text-navy">{country.name}</h3>
                 <p className="text-xs text-gray-600 mt-1">{country.visa}</p>
@@ -134,8 +140,11 @@ const CountriesCarousel: React.FC<CountriesCarouselProps> = ({
                 key={`third-${currentIndex}-${country.name}-${index}`}
                 className="app-card text-center p-4 opacity-10"
               >
-                <div className="text-3xl mb-2">
-                  {country.emoji}
+                <div className="flex flex-col items-center mb-2">
+                  {/* Emoji Flag */}
+                  <div className="text-3xl md:text-4xl mb-1">
+                    {country.emoji}
+                  </div>
                 </div>
                 <h3 className="font-semibold text-sm text-navy">{country.name}</h3>
                 <p className="text-xs text-gray-600 mt-1">{country.visa}</p>

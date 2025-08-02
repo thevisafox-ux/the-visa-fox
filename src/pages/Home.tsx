@@ -78,12 +78,12 @@ const Home: React.FC = () => {
   ];
 
   const countries = [
-    { name: 'Canada', flag: '/canada-flag.png', emoji: '🇨🇦', visa: 'Student, Work, PR' },
-    { name: 'Australia', flag: '/Australia-flag.png', emoji: '🇦🇺', visa: 'Student, Work, PR' },
-    { name: 'UK', flag: '/UK-flag.png', emoji: '🇬🇧', visa: 'Student, Work, Tourist' },
-    { name: 'USA', flag: '/USA-flag.png', emoji: '🇺🇸', visa: 'Student, Work, Tourist' },
-    { name: 'Germany', flag: '/Germany-flag.png', emoji: '🇩🇪', visa: 'Student, Work, PR' },
-    { name: 'New Zealand', flag: '/New-Zealand-flag.png', emoji: '🇳🇿', visa: 'Student, Work, PR' },
+    { name: 'Canada', flag: '', emoji: '🇨🇦', visa: 'Student, Work, PR' },
+    { name: 'Australia', flag: '', emoji: '🇦🇺', visa: 'Student, Work, PR' },
+    { name: 'UK', flag: '', emoji: '🇬🇧', visa: 'Student, Work, Tourist' },
+    { name: 'USA', flag: '', emoji: '🇺🇸', visa: 'Student, Work, Tourist' },
+    { name: 'Germany', flag: '', emoji: '🇩🇪', visa: 'Student, Work, PR' },
+    { name: 'New Zealand', flag: '', emoji: '🇳🇿', visa: 'Student, Work, PR' },
   ];
 
   const visaTypes = [
