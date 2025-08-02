@@ -250,14 +250,27 @@
 .mobile-nav-3d {
   perspective: 1000px;
   transform-style: preserve-3d;
+  animation: navFloat 3s ease-in-out infinite;
+}
+
+@keyframes navFloat {
+  0%, 100% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-2px) rotateX(2deg); }
 }
 
 .mobile-nav-active {
   transform: translateY(-8px) scale(1.1) rotateX(5deg);
   box-shadow: 
-    0 8px 25px rgba(245, 158, 11, 0.3),
-    0 4px 10px rgba(0, 0, 0, 0.1);
+    0 8px 25px rgba(245, 158, 11, 0.4),
+    0 4px 15px rgba(0, 0, 0, 0.15),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
   z-index: 20;
+  animation: activePulse 2s ease-in-out infinite;
+}
+
+@keyframes activePulse {
+  0%, 100% { box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4), 0 4px 15px rgba(0, 0, 0, 0.15); }
+  50% { box-shadow: 0 12px 35px rgba(245, 158, 11, 0.6), 0 6px 20px rgba(0, 0, 0, 0.2); }
 }
 
 .mobile-nav-inactive {
@@ -279,6 +292,24 @@
 .mobile-button-3d {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
+  position: relative;
+}
+
+.mobile-button-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-button-3d:hover::before {
+  opacity: 1;
 }
 
 .mobile-button-3d:active {
