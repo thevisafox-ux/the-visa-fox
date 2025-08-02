@@ -6,22 +6,28 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-navy via-navy/95 to-saffron text-white relative overflow-hidden">
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 bg-white rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-20 left-20 w-16 h-16 bg-white rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+    <footer className="bg-gradient-to-br from-navy via-navy/95 to-saffron text-white relative overflow-hidden footer-3d">
+      {/* 3D Background Effects */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full animate-pulse shadow-2xl"></div>
+        <div className="absolute top-20 right-20 w-24 h-24 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-20 left-20 w-16 h-16 bg-white rounded-full animate-pulse shadow-2xl" style={{animationDelay: '2s'}}></div>
       </div>
+      
+      {/* 3D Glow Effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-saffron/5 via-transparent to-indian-blue/5 rounded-3xl blur-sm"></div>
+      
+      {/* 3D Border Effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 via-white/5 to-indian-blue/10 rounded-3xl opacity-30"></div>
       
       <div className="container-custom relative z-10">
         <div className="section-padding">
           {/* Logo and Description - Top Section */}
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
             <div className="group cursor-pointer flex justify-center mb-4 md:mb-6">
-              <Logo size="lg" className="logo-3d transform group-hover:scale-110 transition-all duration-300" />
+              <Logo size="lg" className="logo-3d transform group-hover:scale-110 transition-all duration-300 shadow-2xl" />
             </div>
-            <p className="text-gray-200 leading-relaxed text-sm md:text-base lg:text-lg text-center max-w-3xl mx-auto px-2 md:px-0">
+            <p className="text-gray-200 leading-relaxed text-sm md:text-base lg:text-lg text-center max-w-3xl mx-auto px-2 md:px-0 footer-description-3d">
               Your trusted partner for visa guidance and immigration consulting. 
               We help Indian students and professionals achieve their international dreams through expert guidance.
             </p>
@@ -32,8 +38,8 @@ const Footer: React.FC = () => {
             {/* Company Info - Desktop Enhanced */}
             <div className="lg:col-span-1 space-y-4 md:space-y-6">
               <div className="space-y-3 md:space-y-4">
-                <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3">
-                  <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center">
+                <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3 footer-header-3d">
+                  <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
                     <span className="text-xs md:text-sm text-navy font-bold">🏢</span>
                   </span>
                   <span>About Us</span>
@@ -45,7 +51,7 @@ const Footer: React.FC = () => {
               
               {/* Contact Details - Desktop Optimized */}
               <div className="space-y-3 md:space-y-4">
-                <h4 className="text-base md:text-lg font-semibold text-saffron">Contact Information</h4>
+                <h4 className="text-base md:text-lg font-semibold text-saffron footer-contact-header-3d">Contact Information</h4>
                 <div className="space-y-2 md:space-y-3">
                   <div className="flex items-start space-x-2 md:space-x-3 group">
                     <MapPin className="w-4 h-4 md:w-5 md:h-5 text-saffron group-hover:scale-110 transition-transform duration-200 flex-shrink-0 mt-0.5" />
@@ -65,8 +71,8 @@ const Footer: React.FC = () => {
 
             {/* Quick Links - Desktop Enhanced */}
             <div className="space-y-4 md:space-y-6">
-              <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3">
-                <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center">
+              <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3 footer-header-3d">
+                <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
                   <span className="text-xs md:text-sm text-navy font-bold">⚡</span>
                 </span>
                 <span>Quick Links</span>
@@ -107,8 +113,8 @@ const Footer: React.FC = () => {
 
             {/* Visa Guidance - Desktop Enhanced */}
             <div className="space-y-4 md:space-y-6">
-              <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3">
-                <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center">
+              <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3 footer-header-3d">
+                <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
                   <span className="text-xs md:text-sm text-navy font-bold">🎯</span>
                 </span>
                 <span>Visa Guidance</span>
@@ -149,8 +155,8 @@ const Footer: React.FC = () => {
 
             {/* Get Free Consultation - Desktop Enhanced */}
             <div className="space-y-4 md:space-y-6">
-              <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3">
-                <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center">
+              <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3 footer-header-3d">
+                <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
                   <span className="text-xs md:text-sm text-navy font-bold">🎁</span>
                 </span>
                 <span>Free Consultation</span>
@@ -162,7 +168,7 @@ const Footer: React.FC = () => {
                 <div className="space-y-2 md:space-y-3">
                   <a 
                     href="/contact" 
-                    className="inline-block bg-gradient-to-r from-saffron to-fox-orange hover:from-fox-orange hover:to-saffron text-white px-4 md:px-6 py-2 md:py-3 rounded-lg transition-all duration-300 font-semibold transform hover:scale-105 shadow-lg text-xs md:text-sm w-full text-center"
+                    className="inline-block bg-gradient-to-r from-saffron to-fox-orange hover:from-fox-orange hover:to-saffron text-white px-4 md:px-6 py-2 md:py-3 rounded-lg transition-all duration-300 font-semibold transform hover:scale-105 shadow-2xl text-xs md:text-sm w-full text-center footer-contact-button-3d"
                   >
                   Contact Now
                   </a>
@@ -176,26 +182,26 @@ const Footer: React.FC = () => {
 
           {/* Connect With Us and Social Media - Desktop Enhanced */}
           <div className="text-center border-t border-white/10 pt-6 md:pt-8">
-            <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3 justify-center mb-4 md:mb-6">
-              <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center">
+            <h3 className="text-lg md:text-xl font-bold flex items-center space-x-2 md:space-x-3 justify-center mb-4 md:mb-6 footer-header-3d">
+              <span className="w-6 h-6 md:w-8 md:h-8 bg-saffron rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
                 <span className="text-xs md:text-sm text-navy font-bold">💬</span>
               </span>
               <span>Connect With Us</span>
             </h3>
             <div className="flex space-x-4 md:space-x-6 justify-center mb-4 md:mb-6">
-              <a href="https://facebook.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full">
+              <a href="https://facebook.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full shadow-lg footer-social-3d">
                 <Facebook className="w-5 h-5 md:w-6 md:h-6" />
               </a>
-              <a href="https://twitter.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full">
+              <a href="https://twitter.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full shadow-lg footer-social-3d">
                 <Twitter className="w-5 h-5 md:w-6 md:h-6" />
               </a>
-              <a href="https://instagram.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full">
+              <a href="https://instagram.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full shadow-lg footer-social-3d">
                 <Instagram className="w-5 h-5 md:w-6 md:h-6" />
               </a>
-              <a href="https://linkedin.com/company/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full">
+              <a href="https://linkedin.com/company/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full shadow-lg footer-social-3d">
                 <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
               </a>
-              <a href="https://youtube.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full">
+              <a href="https://youtube.com/thevisafox" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-saffron transition-all duration-200 transform hover:scale-110 hover:rotate-3 bg-white/5 hover:bg-white/10 p-2 md:p-3 rounded-full shadow-lg footer-social-3d">
                 <Youtube className="w-5 h-5 md:w-6 md:h-6" />
               </a>
             </div>
