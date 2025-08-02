@@ -3598,30 +3598,30 @@ const Checklist: React.FC = () => {
   return (
     <div className="pb-20">
       {/* Header */}
-      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-4 md:p-6 rounded-b-3xl">
-        <div className="text-center space-y-3 md:space-y-4">
+      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-3 md:p-6 rounded-xl md:rounded-b-3xl">
+        <div className="text-center space-y-2 md:space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">Visa Checklist</h1>
-            <p className="text-sm md:text-lg opacity-90">Complete document checklist for your visa application</p>
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2">Visa Checklist</h1>
+            <p className="text-xs md:text-sm lg:text-lg opacity-90">Complete document checklist for your visa application</p>
           </motion.div>
         </div>
       </div>
 
       {/* Selection Section */}
-      <div className="p-4 space-y-4">
+      <div className="p-2 md:p-4 space-y-3 md:space-y-4">
         {/* Country Selection */}
         <div className="app-card">
-          <h2 className="text-lg font-semibold text-navy mb-4">Select Country</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-4">
+          <h2 className="text-base md:text-lg font-semibold text-navy mb-3 md:mb-4">Select Country</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 md:gap-3 lg:gap-4">
                          {countries.map((country, index) => (
                <motion.button
                  key={country.name}
                  onClick={() => handleCountryClick(country.name)}
-                 className={`app-card text-center p-3 md:p-4 transition-all hover:scale-105 ${
+                 className={`app-card text-center p-2 md:p-3 lg:p-4 transition-all hover:scale-105 ${
                    selectedCountry === country.name 
                      ? 'ring-2 ring-saffron bg-saffron/10' 
                      : 'hover:bg-gray-50'
@@ -3630,8 +3630,8 @@ const Checklist: React.FC = () => {
                  animate={{ opacity: 1, scale: 1 }}
                  transition={{ delay: index * 0.1 }}
                >
-                 <div className="text-2xl md:text-3xl mb-2 md:mb-3">{country.emoji}</div>
-                 <h3 className="font-semibold text-xs md:text-sm leading-tight break-words">{country.name}</h3>
+                 <div className="text-xl md:text-2xl lg:text-3xl mb-1 md:mb-2 lg:mb-3">{country.emoji}</div>
+                 <h3 className="font-semibold text-[10px] md:text-xs lg:text-sm leading-tight break-words">{country.name}</h3>
                </motion.button>
              ))}
           </div>
@@ -3646,13 +3646,13 @@ const Checklist: React.FC = () => {
          {/* Visa Type Selection Popup */}
          {showVisaTypePopup && (
            <motion.div
-             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 pb-24 md:pb-4"
+             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 pb-20 md:pb-4"
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              exit={{ opacity: 0 }}
            >
              <motion.div
-               className="bg-white rounded-2xl p-4 md:p-6 w-full max-w-md mx-2 md:mx-4 relative"
+               className="bg-white rounded-xl md:rounded-2xl p-3 md:p-6 w-full max-w-md mx-2 md:mx-4 relative"
                initial={{ scale: 0.8, opacity: 0 }}
                animate={{ scale: 1, opacity: 1 }}
                exit={{ scale: 0.8, opacity: 0 }}
@@ -3665,26 +3665,26 @@ const Checklist: React.FC = () => {
                  <X className="w-5 h-5" />
                </button>
                
-               <div className="text-center mb-4 md:mb-6">
-                 <h2 className="text-xl md:text-2xl font-bold text-navy mb-2">Select Visa Type</h2>
-                 <p className="text-sm md:text-base text-gray-600">Choose your visa type for {clickedCountry}</p>
+               <div className="text-center mb-3 md:mb-6">
+                 <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-navy mb-1 md:mb-2">Select Visa Type</h2>
+                 <p className="text-xs md:text-sm lg:text-base text-gray-600">Choose your visa type for {clickedCountry}</p>
                </div>
                
-               <div className="space-y-3">
+               <div className="space-y-2 md:space-y-3">
                  {visaTypes.map((visa, index) => (
                    <motion.button
                      key={visa.type}
                      onClick={() => handleVisaTypeSelect(visa.type)}
-                     className="w-full flex items-center space-x-3 md:space-x-4 p-3 md:p-4 rounded-xl transition-all bg-gray-50 hover:bg-gray-100 hover:scale-105"
+                     className="w-full flex items-center space-x-2 md:space-x-3 lg:space-x-4 p-2 md:p-3 lg:p-4 rounded-lg md:rounded-xl transition-all bg-gray-50 hover:bg-gray-100 hover:scale-105"
                      initial={{ opacity: 0, x: -20 }}
                      animate={{ opacity: 1, x: 0 }}
                      transition={{ delay: index * 0.1 }}
                    >
-                     <div className={`w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r ${visa.color} rounded-xl flex items-center justify-center text-white`}>
-                       <visa.icon className="w-5 h-5 md:w-6 md:h-6" />
+                     <div className={`w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-r ${visa.color} rounded-lg md:rounded-xl flex items-center justify-center text-white`}>
+                       <visa.icon className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                      </div>
                      <div className="flex-1 text-left">
-                       <h3 className="font-semibold text-navy text-sm md:text-base">{visa.type}</h3>
+                       <h3 className="font-semibold text-navy text-xs md:text-sm lg:text-base">{visa.type}</h3>
                      </div>
                    </motion.button>
                  ))}
@@ -3698,13 +3698,13 @@ const Checklist: React.FC = () => {
          {/* Checklist Display Popup */}
          {showChecklistPopup && (
            <motion.div
-             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 pb-24 md:pb-4"
+             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 pb-20 md:pb-4"
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              exit={{ opacity: 0 }}
            >
              <motion.div
-               className="bg-white rounded-2xl p-4 md:p-6 w-full max-w-4xl mx-2 md:mx-4 max-h-[70vh] md:max-h-[90vh] overflow-y-auto relative"
+               className="bg-white rounded-xl md:rounded-2xl p-3 md:p-6 w-full max-w-4xl mx-2 md:mx-4 max-h-[70vh] md:max-h-[90vh] overflow-y-auto relative"
                initial={{ scale: 0.8, opacity: 0 }}
                animate={{ scale: 1, opacity: 1 }}
                exit={{ scale: 0.8, opacity: 0 }}
@@ -3717,36 +3717,36 @@ const Checklist: React.FC = () => {
                  <X className="w-5 h-5" />
                </button>
                
-               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 md:mb-6 space-y-3 md:space-y-0">
+               <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 md:mb-6 space-y-2 md:space-y-0">
                  <div>
-                   <h2 className="text-xl md:text-2xl font-bold text-navy">
+                   <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-navy">
                      {selectedCountry} - {selectedVisaType} Checklist
                    </h2>
-                   <p className="text-sm md:text-base text-gray-600">Complete document checklist for your visa application</p>
+                   <p className="text-xs md:text-sm lg:text-base text-gray-600">Complete document checklist for your visa application</p>
                  </div>
                  <button
                    onClick={downloadChecklist}
-                   className="flex items-center space-x-2 text-saffron hover:text-saffron/80 bg-saffron/10 px-3 md:px-4 py-2 rounded-lg self-start md:self-auto"
+                   className="flex items-center space-x-2 text-saffron hover:text-saffron/80 bg-saffron/10 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-lg self-start md:self-auto"
                  >
-                   <Download className="w-4 h-4" />
-                   <span className="text-sm font-medium">Download</span>
+                   <Download className="w-3 h-3 md:w-4 md:h-4" />
+                   <span className="text-xs md:text-sm font-medium">Download</span>
                  </button>
                </div>
 
-               <div className="space-y-3 md:space-y-4">
+               <div className="space-y-2 md:space-y-3 lg:space-y-4">
                  {getCurrentChecklist()?.map((section, sectionIndex) => (
-                   <div key={sectionIndex} className="border border-gray-200 rounded-xl p-3 md:p-4 bg-gray-50">
-                     <h3 className="font-semibold text-navy mb-2 md:mb-3 flex items-center">
-                       <span className="w-5 h-5 md:w-6 md:h-6 bg-navy text-white rounded-full flex items-center justify-center text-xs font-bold mr-2 md:mr-3">
+                   <div key={sectionIndex} className="border border-gray-200 rounded-lg md:rounded-xl p-2 md:p-3 lg:p-4 bg-gray-50">
+                     <h3 className="font-semibold text-navy mb-1.5 md:mb-2 lg:mb-3 flex items-center">
+                       <span className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 bg-navy text-white rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold mr-1.5 md:mr-2 lg:mr-3">
                          {sectionIndex + 1}
                        </span>
-                       <span className="text-sm md:text-base">{section.category}</span>
+                       <span className="text-xs md:text-sm lg:text-base">{section.category}</span>
                      </h3>
-                     <div className="space-y-1.5 md:space-y-2">
+                     <div className="space-y-1 md:space-y-1.5 lg:space-y-2">
                        {section.items.map((item, itemIndex) => (
-                         <div key={itemIndex} className="flex items-start space-x-2 md:space-x-3">
-                           <CheckSquare className="w-4 h-4 md:w-5 md:h-5 text-gray-400 mt-0.5 flex-shrink-0" />
-                           <span className="text-xs md:text-sm text-gray-700">{item}</span>
+                         <div key={itemIndex} className="flex items-start space-x-1.5 md:space-x-2 lg:space-x-3">
+                           <CheckSquare className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-gray-400 mt-0.5 flex-shrink-0" />
+                           <span className="text-[10px] md:text-xs lg:text-sm text-gray-700">{item}</span>
                          </div>
                        ))}
                      </div>
