@@ -85,22 +85,22 @@ const Contact: React.FC = () => {
   return (
     <div className="pb-20">
       {/* Header */}
-      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-6 rounded-b-3xl">
-        <div className="text-center space-y-4">
+      <div className="bg-gradient-to-br from-navy via-navy to-saffron text-white p-3 md:p-6 rounded-xl md:rounded-b-3xl">
+        <div className="text-center space-y-2 md:space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl font-bold mb-2">Contact Us</h1>
-            <p className="text-lg opacity-90">Get in touch with our immigration consultants</p>
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2">Contact Us</h1>
+            <p className="text-sm md:text-base lg:text-lg opacity-90">Get in touch with our immigration consultants</p>
           </motion.div>
         </div>
       </div>
 
       {/* Contact Information */}
-      <div className="p-4 space-y-4">
-        <div className="grid grid-cols-1 gap-4">
+      <div className="p-2 md:p-4 space-y-3 md:space-y-4">
+        <div className="grid grid-cols-1 gap-3 md:gap-4">
           {contactInfo.map((info, index) => (
             <motion.div
               key={info.title}
@@ -109,15 +109,15 @@ const Contact: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="flex items-center space-x-4">
-                <div className={`w-14 h-14 bg-gradient-to-r ${info.color} rounded-xl flex items-center justify-center text-white shadow-lg`}>
-                  <info.icon className="w-7 h-7" />
+              <div className="flex items-center space-x-3 md:space-x-4">
+                <div className={`w-10 h-10 md:w-14 md:h-14 bg-gradient-to-r ${info.color} rounded-lg md:rounded-xl flex items-center justify-center text-white shadow-lg`}>
+                  <info.icon className="w-5 h-5 md:w-7 md:h-7" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-navy text-lg">{info.title}</h3>
-                  <div className="space-y-1 mt-2">
+                  <h3 className="font-bold text-navy text-base md:text-lg">{info.title}</h3>
+                  <div className="space-y-0.5 md:space-y-1 mt-1 md:mt-2">
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-sm text-gray-600 font-medium">
+                      <p key={detailIndex} className="text-xs md:text-sm text-gray-600 font-medium">
                         {detail}
                       </p>
                     ))}
@@ -128,7 +128,7 @@ const Contact: React.FC = () => {
                     href={info.action}
                     target={info.action.startsWith('http') ? '_blank' : undefined}
                     rel={info.action.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="bg-saffron hover:bg-fox-orange text-white px-4 py-2 rounded-lg font-semibold transition-colors text-sm"
+                    className="bg-saffron hover:bg-fox-orange text-white px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold transition-colors text-xs md:text-sm"
                   >
                     {info.title === 'Email' ? 'Send Email' : 
                      info.title === 'Office Address' ? 'View Map' : 'Learn More'}
@@ -146,27 +146,27 @@ const Contact: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-navy to-saffron rounded-full flex items-center justify-center mx-auto mb-4">
-              <Mail className="w-8 h-8 text-white" />
+          <div className="text-center mb-4 md:mb-6">
+            <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-navy to-saffron rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+              <Mail className="w-6 h-6 md:w-8 md:h-8 text-white" />
             </div>
-            <h2 className="text-2xl font-bold text-navy mb-2">Send us a Message</h2>
-            <p className="text-gray-600">We'll get back to you within 24 hours</p>
+            <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-navy mb-1 md:mb-2">Send us a Message</h2>
+            <p className="text-sm md:text-base text-gray-600">We'll get back to you within 24 hours</p>
           </div>
           
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="text-center py-8"
+              className="text-center py-6 md:py-8"
             >
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
               </div>
-              <h3 className="text-lg font-semibold text-navy mb-2">
+              <h3 className="text-base md:text-lg font-semibold text-navy mb-1 md:mb-2">
                 Message Sent Successfully!
               </h3>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
@@ -177,8 +177,8 @@ const Contact: React.FC = () => {
               </button>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+              <div className="grid grid-cols-1 gap-3 md:gap-4">
                 <input
                   type="text"
                   required
@@ -226,23 +226,23 @@ const Contact: React.FC = () => {
                 />
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="app-button w-full"
-              >
-                {isSubmitting ? (
-                  <div className="flex items-center justify-center space-x-2">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    <span>Sending Message...</span>
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-center space-x-2">
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
-                  </div>
-                )}
-              </button>
+                              <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="app-button w-full text-sm md:text-base"
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center space-x-2">
+                      <div className="animate-spin rounded-full h-4 w-4 md:h-5 md:w-5 border-b-2 border-white"></div>
+                      <span className="text-xs md:text-sm">Sending Message...</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center space-x-2">
+                      <Send className="w-4 h-4 md:w-5 md:h-5" />
+                      <span className="text-xs md:text-sm">Send Message</span>
+                    </div>
+                  )}
+                </button>
             </form>
           )}
         </motion.div>
@@ -255,26 +255,26 @@ const Contact: React.FC = () => {
           transition={{ delay: 0.4 }}
         >
           <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">💬</span>
+            <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+              <span className="text-xl md:text-2xl">💬</span>
             </div>
-            <h3 className="text-xl font-bold text-navy mb-2">
+            <h3 className="text-lg md:text-xl font-bold text-navy mb-1 md:mb-2">
               WhatsApp Consultation
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
               Get instant answers to your visa questions via WhatsApp. Our experts are available 24/7 for quick consultations.
             </p>
-            <div className="space-y-3">
+            <div className="space-y-2 md:space-y-3">
               <a
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center space-x-2 md:space-x-3 bg-green-600 hover:bg-green-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg text-sm md:text-base"
               >
-                <span className="text-xl">📱</span>
+                <span className="text-lg md:text-xl">📱</span>
                 <span>Chat on WhatsApp</span>
               </a>
-              <p className="text-xs text-gray-500">Response within 5 minutes</p>
+              <p className="text-[10px] md:text-xs text-gray-500">Response within 5 minutes</p>
             </div>
           </div>
         </motion.div>
@@ -286,7 +286,7 @@ const Contact: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <h2 className="text-lg font-semibold text-navy mb-4">Visit Our Office</h2>
+          <h2 className="text-base md:text-lg font-semibold text-navy mb-3 md:mb-4">Visit Our Office</h2>
           
           {/* Map Container */}
           <div className="mb-4 rounded-lg overflow-hidden shadow-lg">
@@ -303,43 +303,43 @@ const Contact: React.FC = () => {
             ></iframe>
           </div>
           
-          <div className="space-y-3 text-sm text-gray-600">
-            <div className="flex items-start space-x-3">
-              <MapPin className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0" />
+          <div className="space-y-2 md:space-y-3 text-xs md:text-sm text-gray-600">
+            <div className="flex items-start space-x-2 md:space-x-3">
+              <MapPin className="w-4 h-4 md:w-5 md:h-5 text-saffron mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-semibold text-navy">Office Address</p>
-                <p>SCO 103, Phase 7, Mohali, Punjab 160062</p>
+                <p className="font-semibold text-navy text-xs md:text-sm">Office Address</p>
+                <p className="text-xs md:text-sm">SCO 103, Phase 7, Mohali, Punjab 160062</p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0">📍</div>
+            <div className="flex items-start space-x-2 md:space-x-3">
+              <div className="w-4 h-4 md:w-5 md:h-5 text-saffron mt-0.5 flex-shrink-0">📍</div>
               <div>
-                <p className="font-semibold text-navy">Landmark</p>
-                <p>Near Phase 7 Market, Mohali</p>
+                <p className="font-semibold text-navy text-xs md:text-sm">Landmark</p>
+                <p className="text-xs md:text-sm">Near Phase 7 Market, Mohali</p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
-              <div className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0">🅿️</div>
+            <div className="flex items-start space-x-2 md:space-x-3">
+              <div className="w-4 h-4 md:w-5 md:h-5 text-saffron mt-0.5 flex-shrink-0">🅿️</div>
               <div>
-                <p className="font-semibold text-navy">Parking</p>
-                <p>Available on premises</p>
+                <p className="font-semibold text-navy text-xs md:text-sm">Parking</p>
+                <p className="text-xs md:text-sm">Available on premises</p>
               </div>
             </div>
           </div>
           
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-3 md:mt-4 flex flex-wrap gap-2 md:gap-3">
             <a
               href="https://maps.google.com/?q=SCO+103,+Phase+7,+Mohali,+Punjab"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 bg-saffron hover:bg-fox-orange text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+              className="inline-flex items-center space-x-1 md:space-x-2 bg-saffron hover:bg-fox-orange text-white px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold transition-colors text-xs md:text-sm"
             >
-              <MapPin className="w-4 h-4" />
+              <MapPin className="w-3 h-3 md:w-4 md:h-4" />
               <span>Get Directions</span>
             </a>
             <a
               href="tel:+919876543210"
-              className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+              className="inline-flex items-center space-x-1 md:space-x-2 bg-green-600 hover:bg-green-700 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold transition-colors text-xs md:text-sm"
             >
               <span>📞</span>
               <span>Call Now</span>
@@ -354,8 +354,8 @@ const Contact: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <h2 className="text-lg font-semibold text-navy mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4">
+          <h2 className="text-base md:text-lg font-semibold text-navy mb-3 md:mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-3 md:space-y-4">
             {[
               {
                 q: "How long does it take to get a response?",
@@ -370,9 +370,9 @@ const Contact: React.FC = () => {
                 a: "Absolutely! You can call us or use the contact form to schedule a consultation."
               }
             ].map((faq, index) => (
-              <div key={index} className="border-b border-gray-200 pb-3 last:border-b-0">
-                <h3 className="font-semibold text-navy text-sm mb-1">{faq.q}</h3>
-                <p className="text-sm text-gray-600">{faq.a}</p>
+              <div key={index} className="border-b border-gray-200 pb-2 md:pb-3 last:border-b-0">
+                <h3 className="font-semibold text-navy text-xs md:text-sm mb-0.5 md:mb-1">{faq.q}</h3>
+                <p className="text-xs md:text-sm text-gray-600">{faq.a}</p>
               </div>
             ))}
           </div>
