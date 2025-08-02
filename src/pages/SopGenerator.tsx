@@ -557,7 +557,7 @@ ${data.name}`;
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       {/* Enhanced Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy via-indian-blue to-saffron text-white overflow-hidden py-8 md:py-12 rounded-2xl md:rounded-3xl mx-2 md:mx-4 my-4 md:my-8">
+      <section className="relative bg-gradient-to-br from-navy via-indian-blue to-saffron text-white overflow-hidden py-4 md:py-8 rounded-xl md:rounded-2xl mx-1 md:mx-4 my-2 md:my-6">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-20 h-20 bg-white rounded-full -translate-x-10 -translate-y-10"></div>
@@ -575,15 +575,15 @@ ${data.name}`;
               className="text-center max-w-4xl mx-auto px-4"
             >
               <motion.div 
-                className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-8 border-2 border-white/30 shadow-lg"
+                className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-4 md:mb-8 border-2 border-white/30 shadow-lg"
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <FileText className="w-10 h-10 text-white" />
+                <FileText className="w-8 h-8 md:w-10 md:h-10 text-white" />
               </motion.div>
               
               <motion.h1 
-                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-white to-saffron bg-clip-text text-transparent"
+                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 md:mb-6 bg-gradient-to-r from-white to-saffron bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -592,7 +592,7 @@ ${data.name}`;
               </motion.h1>
               
               <motion.p 
-                className="text-sm md:text-base lg:text-lg xl:text-xl text-white/95 max-w-xs md:max-w-lg lg:max-w-2xl mx-auto leading-relaxed mb-4 md:mb-6 px-4 md:px-0"
+                className="text-xs md:text-sm lg:text-base xl:text-lg text-white/95 max-w-xs md:max-w-lg lg:max-w-2xl mx-auto leading-relaxed mb-3 md:mb-6 px-2 md:px-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -603,46 +603,46 @@ ${data.name}`;
               
               {/* Enhanced Features Grid */}
               <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6 px-4 md:px-0"
+                className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 mb-3 md:mb-6 px-2 md:px-0"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <motion.div 
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white/15 backdrop-blur-md rounded-lg p-3 md:p-4 border border-white/10 shadow-lg"
+                  className="bg-white/15 backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/10 shadow-lg"
                 >
-                  <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-navy to-indian-blue rounded-lg flex items-center justify-center mb-2 md:mb-3 mx-auto shadow-lg">
-                    <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-navy to-indian-blue rounded-lg flex items-center justify-center mb-1 md:mb-2 lg:mb-3 mx-auto shadow-lg">
+                    <Sparkles className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <h3 className="text-sm md:text-base font-bold text-white mb-1 md:mb-2">AI-Powered</h3>
-                  <p className="text-white/90 text-xs leading-relaxed">
+                  <h3 className="text-xs md:text-sm lg:text-base font-bold text-white mb-1">AI-Powered</h3>
+                  <p className="text-white/90 text-[10px] md:text-xs leading-relaxed">
                     Advanced AI technology creates unique, compelling content tailored to your academic background and career goals.
               </p>
             </motion.div>
                 
                 <motion.div 
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white/15 backdrop-blur-md rounded-lg p-3 md:p-4 border border-white/10 shadow-lg"
+                  className="bg-white/15 backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/10 shadow-lg"
                 >
-                  <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-indian-blue to-saffron rounded-lg flex items-center justify-center mb-2 md:mb-3 mx-auto shadow-lg">
-                    <Zap className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-indian-blue to-saffron rounded-lg flex items-center justify-center mb-1 md:mb-2 lg:mb-3 mx-auto shadow-lg">
+                    <Zap className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <h3 className="text-sm md:text-base font-bold text-white mb-1 md:mb-2">Instant Results</h3>
-                  <p className="text-xs leading-relaxed text-white/90">
+                  <h3 className="text-xs md:text-sm lg:text-base font-bold text-white mb-1">Instant Results</h3>
+                  <p className="text-[10px] md:text-xs leading-relaxed text-white/90">
                     Get your personalized SOP in just minutes, not hours or days. Quick turnaround for urgent applications.
                   </p>
                 </motion.div>
                 
                 <motion.div 
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white/15 backdrop-blur-md rounded-lg p-3 md:p-4 border border-white/10 shadow-lg"
+                  className="bg-white/15 backdrop-blur-md rounded-lg p-2 md:p-4 border border-white/10 shadow-lg"
                 >
-                  <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-saffron to-yellow-500 rounded-lg flex items-center justify-center mb-2 md:mb-3 mx-auto shadow-lg">
-                    <Target className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-saffron to-yellow-500 rounded-lg flex items-center justify-center mb-1 md:mb-2 lg:mb-3 mx-auto shadow-lg">
+                    <Target className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
                   </div>
-                  <h3 className="text-sm md:text-base font-bold text-white mb-1 md:mb-2">Personalized</h3>
-                  <p className="text-white/90 text-xs leading-relaxed">
+                  <h3 className="text-xs md:text-sm lg:text-base font-bold text-white mb-1">Personalized</h3>
+                  <p className="text-white/90 text-[10px] md:text-xs leading-relaxed">
                     Every SOP is customized to your background, goals, and target university. No generic templates.
                   </p>
                 </motion.div>
@@ -650,34 +650,34 @@ ${data.name}`;
 
               {/* Additional Benefits */}
               <motion.div
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+                className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 mx-auto">
-                    <CheckCircle className="w-6 h-6 text-white" />
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2 md:mb-3 mx-auto">
+                    <CheckCircle className="w-4 h-4 md:w-6 md:h-6 text-white" />
                   </div>
-                  <p className="text-white/90 text-sm font-medium">100% Unique</p>
+                  <p className="text-white/90 text-xs md:text-sm font-medium">100% Unique</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 mx-auto">
-                    <CheckCircle className="w-6 h-6 text-white" />
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2 md:mb-3 mx-auto">
+                    <CheckCircle className="w-4 h-4 md:w-6 md:h-6 text-white" />
                   </div>
-                  <p className="text-white/90 text-sm font-medium">Plagiarism Free</p>
+                  <p className="text-white/90 text-xs md:text-sm font-medium">Plagiarism Free</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 mx-auto">
-                    <Download className="w-6 h-6 text-white" />
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2 md:mb-3 mx-auto">
+                    <Download className="w-4 h-4 md:w-6 md:h-6 text-white" />
                   </div>
-                  <p className="text-white/90 text-sm font-medium">Multiple Formats</p>
+                  <p className="text-white/90 text-xs md:text-sm font-medium">Multiple Formats</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 mx-auto">
-                    <Clock className="w-6 h-6 text-white" />
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-white/20 rounded-full flex items-center justify-center mb-2 md:mb-3 mx-auto">
+                    <Clock className="w-4 h-4 md:w-6 md:h-6 text-white" />
                   </div>
-                  <p className="text-white/90 text-sm font-medium">24/7 Available</p>
+                  <p className="text-white/90 text-xs md:text-sm font-medium">24/7 Available</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -687,36 +687,36 @@ ${data.name}`;
 
       <div className="container-custom">
         <div className="section-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
             {/* Enhanced Form Section */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100 relative overflow-hidden">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-2xl p-4 md:p-8 border border-gray-100 relative overflow-hidden">
                 {/* Form Header */}
                 <div className="relative z-10">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-navy to-indian-blue rounded-xl flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-white" />
+                  <div className="flex items-center space-x-2 md:space-x-3 mb-4 md:mb-6">
+                    <div className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-r from-navy to-indian-blue rounded-lg md:rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-4 h-4 md:w-6 md:h-6 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold text-navy">
+                      <h2 className="text-lg md:text-2xl font-bold text-navy">
                   Generate Your SOP
                 </h2>
-                      <p className="text-gray-600 text-sm">Fill in your details below</p>
+                      <p className="text-gray-600 text-xs md:text-sm">Fill in your details below</p>
                     </div>
                   </div>
                   
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                     {/* Enhanced Name Input */}
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 }}
                     >
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
                       Full Name *
                     </label>
                     <input
@@ -724,7 +724,7 @@ ${data.name}`;
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-navy/20 focus:border-navy transition-all duration-300 bg-gray-50 hover:bg-white"
+                        className="w-full px-3 md:px-4 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:ring-4 focus:ring-navy/20 focus:border-navy transition-all duration-300 bg-gray-50 hover:bg-white text-sm md:text-base"
                       placeholder="Enter your full name"
                     />
                     </motion.div>
