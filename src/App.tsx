@@ -15,6 +15,7 @@ import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import Checklist from './pages/Checklist';
 import SopGenerator from './pages/SopGenerator';
+import CacheManagement from './pages/CacheManagement';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -98,6 +99,7 @@ const DesktopLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({
               <NavLink to="/checklist" label="Checklist" setIsLoading={setIsLoading} />
               <NavLink to="/blogs" label="Blogs" setIsLoading={setIsLoading} />
               <NavLink to="/contact" label="Contact" setIsLoading={setIsLoading} />
+              <NavLink to="/cache-management" label="Cache" setIsLoading={setIsLoading} />
               <VisaEligibilityButton />
             </nav>
           </div>
@@ -113,6 +115,7 @@ const DesktopLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({
           <Route path="/contact" element={<Contact />} />
           <Route path="/checklist" element={<Checklist />} />
           <Route path="/sop-generator" element={<SopGenerator />} />
+          <Route path="/cache-management" element={<CacheManagement />} />
         </Routes>
       </main>
 
@@ -176,6 +179,7 @@ const TabletLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
               <NavLink to="/checklist" label="Checklist" setIsLoading={setIsLoading} />
               <NavLink to="/blogs" label="Blogs" setIsLoading={setIsLoading} />
               <NavLink to="/contact" label="Contact" setIsLoading={setIsLoading} />
+              <NavLink to="/cache-management" label="Cache" setIsLoading={setIsLoading} />
               <VisaEligibilityButton />
             </nav>
           </div>
@@ -191,6 +195,7 @@ const TabletLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
           <Route path="/contact" element={<Contact />} />
           <Route path="/checklist" element={<Checklist />} />
           <Route path="/sop-generator" element={<SopGenerator />} />
+          <Route path="/cache-management" element={<CacheManagement />} />
         </Routes>
       </main>
 
@@ -278,6 +283,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
           <Route path="/contact" element={<Contact />} />
           <Route path="/checklist" element={<Checklist />} />
           <Route path="/sop-generator" element={<SopGenerator />} />
+          <Route path="/cache-management" element={<CacheManagement />} />
         </Routes>
       </main>
 
@@ -293,6 +299,7 @@ const MobileLayout: React.FC<{ setIsLoading: (loading: boolean) => void }> = ({ 
           <MobileNavLink to="/checklist" icon="📋" label="Checklist" setIsLoading={setIsLoading} />
           <MobileNavLink to="/blogs" icon="📚" label="Blogs" setIsLoading={setIsLoading} />
           <MobileNavLink to="/contact" icon="💬" label="Contact" setIsLoading={setIsLoading} />
+          <MobileNavLink to="/cache-management" icon="🗑️" label="Cache" setIsLoading={setIsLoading} />
         </div>
       </div>
 
