@@ -96,7 +96,7 @@ const Home: React.FC = () => {
 
   const whyChooseUs = [
     { icon: Users, title: 'Expert Team', desc: 'Certified immigration consultants' },
-    { icon: Award, title: 'High Success Rate', desc: '95% visa approval rate' },
+    { icon: Award, title: 'Success Rate', desc: '95% visa approval rate' },
     { icon: Clock, title: 'Quick Processing', desc: 'Fast and efficient guidance' },
     { icon: Shield, title: 'Trusted Partner', desc: '10+ years of experience' },
   ];
