@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-6">
             <div className="flex items-center space-x-2 text-sm text-gray-600 hover:text-saffron transition-colors duration-200">
               <Phone className="w-4 h-4" />
-              <span>+91 98765 43210</span>
+              <span>0172 319 6794</span>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-600 hover:text-saffron transition-colors duration-200">
               <Mail className="w-4 h-4" />
@@ -198,7 +198,7 @@ const Navbar: React.FC = () => {
                 <div className="pt-6 border-t border-gray-200 space-y-4">
                   <div className="flex items-center space-x-3 text-sm text-gray-600">
                     <Phone className="w-4 h-4 text-saffron" />
-                    <span>+91 98765 43210</span>
+                    <span>0172 319 6794</span>
                   </div>
                   <div className="flex items-center space-x-3 text-sm text-gray-600">
                     <Mail className="w-4 h-4 text-saffron" />
