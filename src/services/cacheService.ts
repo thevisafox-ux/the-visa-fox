@@ -214,7 +214,7 @@ export class CacheService {
    */
   static forceReload(): void {
     try {
-      window.location.reload(true);
+      window.location.reload();
     } catch (error) {
       console.error('Error forcing reload:', error);
     }
