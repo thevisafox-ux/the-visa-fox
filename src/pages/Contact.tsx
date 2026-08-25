@@ -266,7 +266,7 @@ const Contact: React.FC = () => {
             </p>
             <div className="space-y-2 md:space-y-3">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/911723196794"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 md:space-x-3 bg-green-600 hover:bg-green-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg text-sm md:text-base"
@@ -338,7 +338,7 @@ const Contact: React.FC = () => {
               <span>Get Directions</span>
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+911723196794"
               className="inline-flex items-center space-x-1 md:space-x-2 bg-green-600 hover:bg-green-700 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold transition-colors text-xs md:text-sm"
             >
               <span>📞</span>
