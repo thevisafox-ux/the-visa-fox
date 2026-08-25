@@ -92,7 +92,7 @@ export const clearCacheAndReload = async (): Promise<void> => {
   try {
     await clearAllCache();
     setTimeout(() => {
-      window.location.reload(true);
+      window.location.reload();
     }, 100);
   } catch (error) {
     console.error('Error clearing cache and reloading:', error);
