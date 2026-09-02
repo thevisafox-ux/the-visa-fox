@@ -1,36 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-  }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: #0f172a; background: #fff; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { text-decoration: none; }
+  button, input, select, textarea { font: inherit; }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-saffron hover:bg-fox-orange text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
-  }
-  
-  .btn-secondary {
-    @apply bg-navy hover:bg-indian-blue text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
-  }
-  
-  .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
-  }
-  
-  .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
-  }
-  
-  .container-custom {
-    @apply max-w-7xl mx-auto;
-  }
+  .btn-primary { @apply rounded-xl bg-[#8f1633] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#761029]; }
+  .btn-secondary { @apply rounded-xl bg-[#0b1f3a] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#102b4e]; }
+  .card { @apply rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg; }
+  .section-padding { @apply px-4 py-16 sm:px-6 lg:px-8; }
+  .container-custom { @apply mx-auto max-w-7xl; }
+  .app-card { @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm; }
+  .app-button { @apply rounded-xl bg-[#8f1633] px-6 py-3 font-bold text-white shadow-lg transition hover:bg-[#761029] disabled:cursor-not-allowed disabled:opacity-60; }
+  .app-input { @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#a87920] focus:ring-4 focus:ring-[#a87920]/10; }
 }
