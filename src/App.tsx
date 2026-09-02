@@ -5,6 +5,7 @@ import './App.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PageMeta from './components/PageMeta';
 import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import BlogDetail from './pages/BlogDetail';
@@ -12,6 +13,7 @@ import Contact from './pages/Contact';
 import Checklist from './pages/Checklist';
 import SopGenerator from './pages/SopGenerator';
 import CacheManagement from './pages/CacheManagement';
+import Legal from './pages/Legal';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -22,6 +24,7 @@ const ScrollToTop = () => {
 const SiteRoutes = () => (
   <div className="min-h-screen bg-white text-slate-900">
     <ScrollToTop />
+    <PageMeta />
     <Navbar />
     <main className="pt-20">
       <Routes>
@@ -32,6 +35,8 @@ const SiteRoutes = () => (
         <Route path="/checklist" element={<Checklist />} />
         <Route path="/sop-generator" element={<SopGenerator />} />
         <Route path="/cache-management" element={<CacheManagement />} />
+        <Route path="/privacy-policy" element={<Legal type="privacy" />} />
+        <Route path="/terms" element={<Legal type="terms" />} />
       </Routes>
     </main>
     <Footer />
