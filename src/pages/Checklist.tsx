@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckSquare, Download, MapPin, GraduationCap, Briefcase, Plane, X } from 'lucide-react';
+import { Check, CheckSquare, Download, MapPin, GraduationCap, Briefcase, Plane, X } from 'lucide-react';
 
 // Type definitions
 interface ChecklistItem {
@@ -24,40 +24,40 @@ const Checklist: React.FC = () => {
   const [clickedCountry, setClickedCountry] = useState('');
 
   const countries = [
-    { name: 'Canada', flag: '/canada-flag.png', emoji: '🇨🇦' },
-    { name: 'Australia', flag: '/Australia-flag.png', emoji: '🇦🇺' },
-    { name: 'UK', flag: '/UK-flag.png', emoji: '🇬🇧' },
-    { name: 'USA', flag: '/USA-flag.png', emoji: '🇺🇸' },
-    { name: 'Germany', flag: '/Germany-flag.png', emoji: '🇩🇪' },
-    { name: 'New Zealand', flag: '/New-Zealand-flag.png', emoji: '🇳🇿' },
-    { name: 'Ireland', flag: '/ireland-flag.png', emoji: '🇮🇪' },
-    { name: 'Netherlands', flag: '/netherlands-flag.png', emoji: '🇳🇱' },
-    { name: 'France', flag: '/france-flag.png', emoji: '🇫🇷' },
-    { name: 'Italy', flag: '/italy-flag.png', emoji: '🇮🇹' },
-    { name: 'Spain', flag: '/spain-flag.png', emoji: '🇪🇸' },
-    { name: 'Sweden', flag: '/sweden-flag.png', emoji: '🇸🇪' },
-    { name: 'Norway', flag: '/norway-flag.png', emoji: '🇳🇴' },
-    { name: 'Denmark', flag: '/denmark-flag.png', emoji: '🇩🇰' },
-    { name: 'Finland', flag: '/finland-flag.png', emoji: '🇫🇮' },
-    { name: 'Switzerland', flag: '/switzerland-flag.png', emoji: '🇨🇭' },
-    { name: 'Austria', flag: '/austria-flag.png', emoji: '🇦🇹' },
-    { name: 'Belgium', flag: '/belgium-flag.png', emoji: '🇧🇪' },
-    { name: 'Poland', flag: '/poland-flag.png', emoji: '🇵🇱' },
-    { name: 'Czech Republic', flag: '/czech-flag.png', emoji: '🇨🇿' },
-    { name: 'Hungary', flag: '/hungary-flag.png', emoji: '🇭🇺' },
-    { name: 'Portugal', flag: '/portugal-flag.png', emoji: '🇵🇹' },
-    { name: 'Greece', flag: '/greece-flag.png', emoji: '🇬🇷' },
-    { name: 'Japan', flag: '/japan-flag.png', emoji: '🇯🇵' },
-    { name: 'South Korea', flag: '/south-korea-flag.png', emoji: '🇰🇷' },
-    { name: 'Singapore', flag: '/singapore-flag.png', emoji: '🇸🇬' },
-    { name: 'Malaysia', flag: '/malaysia-flag.png', emoji: '🇲🇾' },
-    { name: 'Thailand', flag: '/thailand-flag.png', emoji: '🇹🇭' },
-    { name: 'UAE', flag: '/uae-flag.png', emoji: '🇦🇪' },
-    { name: 'Qatar', flag: '/qatar-flag.png', emoji: '🇶🇦' },
-    { name: 'Saudi Arabia', flag: '/saudi-arabia-flag.png', emoji: '🇸🇦' },
-    { name: 'Kuwait', flag: '/kuwait-flag.png', emoji: '🇰🇼' },
-    { name: 'Oman', flag: '/oman-flag.png', emoji: '🇴🇲' },
-    { name: 'Bahrain', flag: '/bahrain-flag.png', emoji: '🇧🇭' }
+    { name: 'Canada', code: 'ca', emoji: '🇨🇦' },
+    { name: 'Australia', code: 'au', emoji: '🇦🇺' },
+    { name: 'UK', code: 'gb', emoji: '🇬🇧' },
+    { name: 'USA', code: 'us', emoji: '🇺🇸' },
+    { name: 'Germany', code: 'de', emoji: '🇩🇪' },
+    { name: 'New Zealand', code: 'nz', emoji: '🇳🇿' },
+    { name: 'Ireland', code: 'ie', emoji: '🇮🇪' },
+    { name: 'Netherlands', code: 'nl', emoji: '🇳🇱' },
+    { name: 'France', code: 'fr', emoji: '🇫🇷' },
+    { name: 'Italy', code: 'it', emoji: '🇮🇹' },
+    { name: 'Spain', code: 'es', emoji: '🇪🇸' },
+    { name: 'Sweden', code: 'se', emoji: '🇸🇪' },
+    { name: 'Norway', code: 'no', emoji: '🇳🇴' },
+    { name: 'Denmark', code: 'dk', emoji: '🇩🇰' },
+    { name: 'Finland', code: 'fi', emoji: '🇫🇮' },
+    { name: 'Switzerland', code: 'ch', emoji: '🇨🇭' },
+    { name: 'Austria', code: 'at', emoji: '🇦🇹' },
+    { name: 'Belgium', code: 'be', emoji: '🇧🇪' },
+    { name: 'Poland', code: 'pl', emoji: '🇵🇱' },
+    { name: 'Czech Republic', code: 'cz', emoji: '🇨🇿' },
+    { name: 'Hungary', code: 'hu', emoji: '🇭🇺' },
+    { name: 'Portugal', code: 'pt', emoji: '🇵🇹' },
+    { name: 'Greece', code: 'gr', emoji: '🇬🇷' },
+    { name: 'Japan', code: 'jp', emoji: '🇯🇵' },
+    { name: 'South Korea', code: 'kr', emoji: '🇰🇷' },
+    { name: 'Singapore', code: 'sg', emoji: '🇸🇬' },
+    { name: 'Malaysia', code: 'my', emoji: '🇲🇾' },
+    { name: 'Thailand', code: 'th', emoji: '🇹🇭' },
+    { name: 'UAE', code: 'ae', emoji: '🇦🇪' },
+    { name: 'Qatar', code: 'qa', emoji: '🇶🇦' },
+    { name: 'Saudi Arabia', code: 'sa', emoji: '🇸🇦' },
+    { name: 'Kuwait', code: 'kw', emoji: '🇰🇼' },
+    { name: 'Oman', code: 'om', emoji: '🇴🇲' },
+    { name: 'Bahrain', code: 'bh', emoji: '🇧🇭' }
   ];
 
   const visaTypes = [
@@ -3614,26 +3614,63 @@ const Checklist: React.FC = () => {
       {/* Selection Section */}
       <div className="p-2 md:p-4 space-y-3 md:space-y-4">
         {/* Country Selection */}
-        <div className="app-card">
-          <h2 className="text-base md:text-lg font-semibold text-navy mb-3 md:mb-4">Select Country</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 md:gap-3 lg:gap-4">
-                         {countries.map((country, index) => (
-               <motion.button
-                 key={country.name}
-                 onClick={() => handleCountryClick(country.name)}
-                 className={`app-card text-center p-2 md:p-3 lg:p-4 transition-all hover:scale-105 ${
-                   selectedCountry === country.name 
-                     ? 'ring-2 ring-saffron bg-saffron/10' 
-                     : 'hover:bg-gray-50'
-                 }`}
-                 initial={{ opacity: 0, scale: 0.9 }}
-                 animate={{ opacity: 1, scale: 1 }}
-                 transition={{ delay: index * 0.1 }}
-               >
-                 <div className="text-xl md:text-2xl lg:text-3xl mb-1 md:mb-2 lg:mb-3">{country.emoji}</div>
-                 <h3 className="font-semibold text-[10px] md:text-xs lg:text-sm leading-tight break-words">{country.name}</h3>
-               </motion.button>
-             ))}
+        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+          <div className="flex flex-col gap-2 border-b border-slate-100 bg-gradient-to-r from-[#f8fafc] to-[#f7f1e5] px-5 py-5 sm:flex-row sm:items-center sm:justify-between md:px-7">
+            <div>
+              <h2 className="text-lg font-extrabold text-[#0b1f3a] md:text-xl">Select Country</h2>
+              <p className="mt-1 text-xs text-slate-500 md:text-sm">Choose a destination to view its visa document checklist</p>
+            </div>
+            <div className="w-fit rounded-full border border-[#d5b26b]/40 bg-white px-3 py-1.5 text-xs font-bold text-[#8f1633]">
+              {countries.length} destinations
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3 p-4 sm:grid-cols-3 md:p-6 lg:grid-cols-4 xl:grid-cols-6">
+            {countries.map((country, index) => {
+              const isSelected = selectedCountry === country.name;
+              return (
+                <motion.button
+                  key={country.name}
+                  type="button"
+                  onClick={() => handleCountryClick(country.name)}
+                  className={`group relative min-h-[132px] overflow-hidden rounded-2xl border p-4 text-center transition-colors focus:outline-none focus:ring-4 focus:ring-[#a87920]/20 ${
+                    isSelected
+                      ? 'border-[#8f1633] bg-[#fff7f8] shadow-lg shadow-[#8f1633]/10'
+                      : 'border-slate-200 bg-white hover:border-[#d5b26b] hover:bg-[#fffdf8] hover:shadow-lg'
+                  }`}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: Math.min(index * 0.025, 0.35), duration: 0.3 }}
+                  whileHover={{ y: -4 }}
+                  whileTap={{ scale: 0.97 }}
+                  aria-pressed={isSelected}
+                >
+                  {isSelected && (
+                    <span className="absolute right-2.5 top-2.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#8f1633] text-white shadow-md">
+                      <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                    </span>
+                  )}
+                  <div className="mx-auto flex h-14 w-[74px] items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm transition-transform group-hover:scale-105">
+                    <img
+                      src={`https://flagcdn.com/w160/${country.code}.png`}
+                      srcSet={`https://flagcdn.com/w80/${country.code}.png 1x, https://flagcdn.com/w160/${country.code}.png 2x`}
+                      width="74"
+                      height="48"
+                      loading="lazy"
+                      alt={`${country.name} flag`}
+                      className="h-full w-full object-cover"
+                      onError={(event) => {
+                        event.currentTarget.style.display = 'none';
+                        const fallback = event.currentTarget.nextElementSibling as HTMLElement | null;
+                        fallback?.classList.remove('hidden');
+                      }}
+                    />
+                    <span className="hidden text-3xl" aria-hidden="true">{country.emoji}</span>
+                  </div>
+                  <h3 className={`mt-3 break-words text-sm font-extrabold leading-tight ${isSelected ? 'text-[#8f1633]' : 'text-[#0b1f3a]'}`}>{country.name}</h3>
+                  <p className="mt-1 text-[11px] font-medium uppercase tracking-wider text-slate-400">View checklist</p>
+                </motion.button>
+              );
+            })}
           </div>
         </div>
 
@@ -3770,4 +3807,4 @@ const Checklist: React.FC = () => {
    );
  };
 
-export default Checklist; 
+export default Checklist;
