@@ -14,22 +14,16 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', className = '' }) => {
   };
 
   return (
-    <div className={`${sizeClasses[size]} relative group logo-3d`}>
+    <div className={`${sizeClasses[size]} relative shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm`}>
       <ImageWithFallback
         src="/logo.png"
         alt="The Visa Fox Logo"
-        className={`w-full h-full object-contain rounded-lg border border-white/20 shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl logo-glow ${className}`}
+        className={`h-full w-full object-contain ${className}`}
         fallbackText="V"
         fallbackIcon="🦊"
       />
-      {/* Enhanced 3D Effect Overlay */}
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/40 via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-      {/* Enhanced Border Glow */}
-      <div className="absolute inset-0 rounded-lg border border-white/60 shadow-inner opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-      {/* Subtle Inner Glow */}
-      <div className="absolute inset-1 rounded-md bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
     </div>
   );
 };
 
-export default Logo; 
+export default Logo;
