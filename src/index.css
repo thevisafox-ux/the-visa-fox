@@ -5,10 +5,11 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: #0f172a; background: #fff; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: #0f172a; background: #fff; font-size: 16px; -webkit-font-smoothing: antialiased; }
   * { box-sizing: border-box; }
   a { text-decoration: none; }
   button, input, select, textarea { font: inherit; }
+  ::selection { background: #e4c47e; color: #07182e; }
 }
 
 @layer components {
