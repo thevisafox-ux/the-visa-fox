@@ -81,8 +81,12 @@ const reveal = {
   transition: { duration: 0.5 },
 };
 
+const countryCodeToEmoji = (code: string) => code
+  .toUpperCase()
+  .replace(/./g, (character) => String.fromCodePoint(127397 + character.charCodeAt(0)));
+
 const Flag = ({ code, name }: { code: string; name: string }) => (
-  <div className="h-11 w-16 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-sm">
+  <div className="flex h-11 w-16 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-sm">
     <img
       src={`https://flagcdn.com/w160/${code}.png`}
       srcSet={`https://flagcdn.com/w80/${code}.png 1x, https://flagcdn.com/w160/${code}.png 2x`}
@@ -91,7 +95,15 @@ const Flag = ({ code, name }: { code: string; name: string }) => (
       height="44"
       loading="lazy"
       className="h-full w-full object-cover"
+      onError={(event) => {
+        event.currentTarget.style.display = 'none';
+        const fallback = event.currentTarget.nextElementSibling as HTMLElement | null;
+        fallback?.classList.remove('hidden');
+      }}
     />
+    <span className="hidden text-3xl" role="img" aria-label={`${name} flag fallback`}>
+      {countryCodeToEmoji(code)}
+    </span>
   </div>
 );
 
